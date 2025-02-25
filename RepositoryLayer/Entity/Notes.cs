@@ -20,6 +20,10 @@ namespace RepositoryLayer.Entity
 
         public string Color { get; set; }
 
+        public bool IsDeleted { get; set; }
+
+        public bool isArchive { get; set; }
+
         [ForeignKey("User")]
         public int Id { get; set; }
     }

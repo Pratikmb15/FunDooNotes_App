@@ -79,6 +79,7 @@ C:\Users\MILIND\source\repos\FunDooNotes\FunDooNotes\obj\Debug\net6.0\FunDooNote
 C:\Users\MILIND\source\repos\FunDooNotes\FunDooNotes\obj\Debug\net6.0\FunDooNotes.csproj.CoreCompileInputs.cache
 C:\Users\MILIND\source\repos\FunDooNotes\FunDooNotes\obj\Debug\net6.0\FunDooNotes.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\MILIND\source\repos\FunDooNotes\FunDooNotes\obj\Debug\net6.0\FunDooNotes.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\MILIND\source\repos\FunDooNotes\FunDooNotes\obj\Debug\net6.0\FunDooNotes.sourcelink.json
 C:\Users\MILIND\source\repos\FunDooNotes\FunDooNotes\obj\Debug\net6.0\scopedcss\bundle\FunDooNotes.styles.css
 C:\Users\MILIND\source\repos\FunDooNotes\FunDooNotes\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\MILIND\source\repos\FunDooNotes\FunDooNotes\obj\Debug\net6.0\staticwebassets.development.json

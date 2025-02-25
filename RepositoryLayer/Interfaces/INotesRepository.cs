@@ -11,7 +11,10 @@ namespace RepositoryLayer.Interfaces
     {
         Notes CreateNote(Notes note);
         List<Notes> GetUserNotes(int userId);
+        Notes GetNotesById(int noteId, int userId);
         Notes UpdateNote(Notes note);
         bool DeleteNote(int noteId, int userId);
+        bool checkDeletedNote(int NoteId, int UserId);
+        bool checkArchieved(int NoteId, int UserId);
     }
 }

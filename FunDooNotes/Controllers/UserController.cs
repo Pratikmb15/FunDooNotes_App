@@ -14,9 +14,9 @@ namespace FunDooNotes.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
-        private readonly AuthService _authService;
+        private readonly IAuthService _authService;
 
-        public UserController(IUserService userService, AuthService authService)
+        public UserController(IUserService userService, IAuthService authService)
         {
             _userService = userService;
             _authService = authService;
@@ -25,28 +25,25 @@ namespace FunDooNotes.Controllers
         [HttpPost]
         public IActionResult RegisterUser([FromBody] RegisterModel Nuser)
         {
-            User user = new User
-            {
-                FirstName = Nuser.FirstName,
-                LastName = Nuser.LastName,
-                Email = Nuser.Email,
-                PasswordHash = Nuser.Password
-            };
+            
+            if (_userService.VerifyEmailExists(Nuser.Email)) {
+                return BadRequest(new { Success = false, Message = "Email already exists" });
+            }
 
-            _userService.RegisterUser(user);
+            _userService.RegisterUser(Nuser);
             return Ok(new { Success = true, Message = "User registered successfully", Data = new { } });
         }
 
         [HttpPost("login")]
         public IActionResult Login([FromBody] LoginRequest request)
         {
-            var user = _userService.GetUserByEmail(request.Email); // Ensure this method returns User object
+            var user = _userService.GetUserByEmail(request.Email); 
             if (user == null || !_userService.VerifyUser(request.Email, request.Password))
             {
                 return Unauthorized(new { Success = false, Message = "Invalid credentials" });
             }
 
-            var token = _authService.GenerateToken(user.Id, user.Email); // 🔹 Pass User ID to Token
+            var token = _authService.GenerateToken(user.Id, user.Email); 
             return Ok(new { Success = true, Message = "Login successful", Token = token });
         }
        

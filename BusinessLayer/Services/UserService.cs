@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Interfaces;
+using ModelLayer;
 using RepositoryLayer.Entity;
 using RepositoryLayer.Interfaces;
 using System;
@@ -24,10 +25,10 @@ namespace BusinessLayer.Services
 
         public User GetUserByEmail(string email) => _userRepository.GetUserByEmail(email);
 
-        public void RegisterUser(User user)
+        public void RegisterUser(RegisterModel Nuser)
         {
-            user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(user.PasswordHash);
-            _userRepository.AddUser(user);
+            
+            _userRepository.AddUser(Nuser);
         }
 
         public bool VerifyUser(string email, string password)
@@ -39,5 +40,9 @@ namespace BusinessLayer.Services
         public void UpdateUser(User user) => _userRepository.UpdateUser(user);
 
         public void DeleteUser(int id) => _userRepository.DeleteUser(id);
+
+        public bool VerifyEmailExists(string email) { 
+            return _userRepository.CheckUserExists(email);
+        }
     }
 }

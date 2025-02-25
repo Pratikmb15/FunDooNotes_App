@@ -20,7 +20,7 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<INotesBusiness, NotesBusiness>();
 builder.Services.AddScoped<INotesRepository, NotesRepository>();
-builder.Services.AddScoped<AuthService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 
 // 🔹 Configure JWT authentication
 var key = Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]);

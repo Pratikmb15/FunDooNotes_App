@@ -1,4 +1,5 @@
-﻿using RepositoryLayer.Entity;
+﻿using ModelLayer;
+using RepositoryLayer.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,8 +13,9 @@ namespace RepositoryLayer.Interfaces
         IEnumerable<User> GetUsers();
         User GetUserById(int id);
         User GetUserByEmail(String Email);
-        void AddUser(User user);
+        void AddUser(RegisterModel Nuser);
         void UpdateUser(User user);
         void DeleteUser(int id);
+        bool CheckUserExists(string email);      
     }
 }

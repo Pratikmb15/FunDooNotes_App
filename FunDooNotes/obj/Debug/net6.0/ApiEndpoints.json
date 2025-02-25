@@ -43,6 +43,38 @@
   },
   {
     "ContainingType": "FunDooNotes.Controllers.NotesController",
+    "Method": "ToggleArchive",
+    "RelativePath": "api/notes/ToggleArchive/{noteId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "noteId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FunDooNotes.Controllers.NotesController",
+    "Method": "ToggleTrash",
+    "RelativePath": "api/notes/ToggleTrash/{noteId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "noteId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FunDooNotes.Controllers.NotesController",
     "Method": "UpdateNote",
     "RelativePath": "api/notes/update/{id}",
     "HttpMethod": "PUT",

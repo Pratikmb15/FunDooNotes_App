@@ -40,9 +40,15 @@ namespace RepositoryLayer.Migrations
                     b.Property<int>("Id")
                         .HasColumnType("int");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("isArchive")
+                        .HasColumnType("bit");
 
                     b.HasKey("Notes_id");
 

@@ -1,16 +1,15 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using BusinessLayer.Interfaces;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLayer.Services
 {
-    public class AuthService
+    public class AuthService : IAuthService
     {
         private readonly IConfiguration _config;
 
@@ -26,12 +25,12 @@ namespace BusinessLayer.Services
 
             var claims = new[]
             {
-        new Claim(ClaimTypes.NameIdentifier, userId.ToString()),
-        new Claim(JwtRegisteredClaimNames.Sub, email),
-        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-        new Claim(ClaimTypes.Email, email),
-        new Claim(ClaimTypes.Role, "User")
-    };
+                new Claim(ClaimTypes.NameIdentifier, userId.ToString()),
+                new Claim(JwtRegisteredClaimNames.Sub, email),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(ClaimTypes.Email, email),
+                new Claim(ClaimTypes.Role, "User")
+            };
 
             var token = new JwtSecurityToken(
                 issuer: _config["Jwt:Issuer"],

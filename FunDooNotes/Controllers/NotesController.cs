@@ -3,6 +3,7 @@ using BusinessLayer.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using ModelLayer;
 using RepositoryLayer.Entity;
@@ -16,7 +17,7 @@ namespace FunDooNotes.Controllers
     [ApiController]
     public class NotesController : ControllerBase
     {
-       
+
         private readonly INotesBusiness _notesBusiness;
 
         public NotesController(INotesBusiness notesBusiness)
@@ -36,20 +37,20 @@ namespace FunDooNotes.Controllers
         public IActionResult CreateNote([FromBody] NoteModel noteModel)
         {
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-            if (userId==null)
+            if (userId == null)
             {
                 return Unauthorized(new { Success = false, Message = "Invalid token. Please log in again." });
             }
             var note = new Notes();
-            
-               note.Id = userId;
-               note.Title = noteModel.Title;
-               note.Description = noteModel.Description;
-               note.Color = noteModel.Color;
-            
+
+            note.Id = userId;
+            note.Title = noteModel.Title;
+            note.Description = noteModel.Description;
+            note.Color = noteModel.Color;
+
             var createdNote = _notesBusiness.CreateNote(note);
 
-            return Ok(new { Success = true, Message = "Note created successfully", Data = createdNote });    
+            return Ok(new { Success = true, Message = "Note created successfully", Data = createdNote });
         }
 
         [HttpPut("update/{id}")]
@@ -83,6 +84,30 @@ namespace FunDooNotes.Controllers
                 return NotFound(new { Success = false, Message = "Note not found" });
 
             return Ok(new { Success = true, Message = "Note deleted successfully" });
+        }
+
+        [HttpPut("ToggleArchive/{noteId}")]
+        public IActionResult ToggleArchive(int noteId)
+        {
+
+            var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            Notes note = _notesBusiness.GetNotesById(noteId, userId);
+            if (note.IsDeleted == true)
+            {
+                return BadRequest(new { success = false, Message = "Note cannot be Archieved : Note is in Trash" });
+            }
+            var archieved = _notesBusiness.ToggleArchieved(noteId, userId);
+            note = _notesBusiness.GetNotesById(noteId, userId);
+            return Ok(new { success = true, Message = "Note Archieve Toggled Successfully",Data =$"Note Archived Status :{note.isArchive}" });
+        }
+
+        [HttpPut("ToggleTrash/{noteId}")]
+        public IActionResult ToggleTrash(int noteId)
+        {
+            var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            var Trashed = _notesBusiness.ToggleNoteDeleted(noteId, userId);
+            Notes note = _notesBusiness.GetNotesById(noteId, userId);
+            return Ok(new { success = true, Message = "Note Trash Toggled Successfully", Data = $"Note Trashed Status :{note.IsDeleted}" });
         }
     }
 }

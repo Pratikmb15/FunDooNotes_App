@@ -295,7 +295,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\ModelLayer\\ModelLayer.csproj": {
+                "projectPath": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\ModelLayer\\ModelLayer.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -314,6 +318,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.36, )"

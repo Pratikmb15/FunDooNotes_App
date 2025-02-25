@@ -29,6 +29,11 @@ namespace RepositoryLayer.Services
         {
             return _context.Notes.Where(n => n.Id == userId).ToList();
         }
+        public Notes GetNotesById(int noteId, int userId)
+        {
+            Notes note = _context.Notes.FirstOrDefault(x => x.Notes_id == noteId && x.Id == userId);
+            return note;
+        }
 
         public Notes UpdateNote(Notes note)
         {
@@ -45,6 +50,26 @@ namespace RepositoryLayer.Services
             _context.Notes.Remove(note);
             _context.SaveChanges();
             return true;
+        }
+        public bool checkDeletedNote(int NoteId, int UserId) {
+            var note = _context.Notes.FirstOrDefault(x => x.Notes_id == NoteId && x.Id==UserId);
+            if (note == null) {
+                return false;
+            }
+            note.IsDeleted = !note.IsDeleted;
+            _context.SaveChanges();
+            return true;
+        }
+        public bool checkArchieved(int NoteId, int UserId) {
+         var note = _context.Notes.FirstOrDefault(x => x.Notes_id == NoteId && x.Id == UserId);
+            
+                if (note == null)
+                {
+                    return false;
+                }     
+                note.isArchive = !note.isArchive;
+                _context.SaveChanges();
+                return true; 
         }
     }
 }

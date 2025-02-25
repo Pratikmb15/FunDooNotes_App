@@ -27,6 +27,10 @@ namespace BusinessLayer.Services
         {
             return _notesRepository.GetUserNotes(userId);
         }
+        public Notes GetNotesById(int noteId, int userId)
+        {
+            return _notesRepository.GetNotesById(noteId, userId);
+        }
 
         public Notes UpdateNote(Notes note)
         {
@@ -36,6 +40,13 @@ namespace BusinessLayer.Services
         public bool DeleteNote(int noteId, int userId)
         {
             return _notesRepository.DeleteNote(noteId, userId);
+        }
+        public bool ToggleNoteDeleted(int NoteId, int UserId) {
+        return _notesRepository.checkDeletedNote(NoteId, UserId);
+        }
+
+        public bool ToggleArchieved(int NoteId, int Userid) {
+            return _notesRepository.checkArchieved(NoteId, Userid);
         }
     }
 }

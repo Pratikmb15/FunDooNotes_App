@@ -1,4 +1,6 @@
-﻿using RepositoryLayer.Context;
+﻿using BCrypt.Net;
+using ModelLayer;
+using RepositoryLayer.Context;
 using RepositoryLayer.Entity;
 using RepositoryLayer.Interfaces;
 using System;
@@ -30,8 +32,16 @@ namespace RepositoryLayer.Services
             return _context.Users.FirstOrDefault(u => u.Email == Email);
         }
 
-        public void AddUser(User user)
+        public void AddUser(RegisterModel Nuser)
         {
+            User user = new User
+            {
+                FirstName = Nuser.FirstName,
+                LastName = Nuser.LastName,
+                Email = Nuser.Email,
+                PasswordHash = Nuser.Password
+            };
+            user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(user.PasswordHash);
             _context.Users.Add(user);
             _context.SaveChanges();
         }
@@ -49,6 +59,7 @@ namespace RepositoryLayer.Services
             }
         }
 
+        
         public void DeleteUser(int id)
         {
             var user = _context.Users.Find(id);
@@ -58,5 +69,12 @@ namespace RepositoryLayer.Services
                 _context.SaveChanges();
             }
         }
+
+        public bool CheckUserExists(string email)
+        {
+            var alreadyExists = _context.Users.Any(u => u.Email == email);
+            return alreadyExists;
+        }
+        
     }
 }
