@@ -1,13 +1,7 @@
-﻿using BCrypt.Net;
-using ModelLayer;
+﻿using ModelLayer;
 using RepositoryLayer.Context;
 using RepositoryLayer.Entity;
 using RepositoryLayer.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RepositoryLayer.Services
 {
@@ -18,6 +12,7 @@ namespace RepositoryLayer.Services
         public UserRepository(AppDbContext context)
         {
             _context = context;
+
         }
 
         public IEnumerable<User> GetUsers() => _context.Users.ToList();
@@ -59,7 +54,7 @@ namespace RepositoryLayer.Services
             }
         }
 
-        
+
         public void DeleteUser(int id)
         {
             var user = _context.Users.Find(id);
@@ -75,6 +70,37 @@ namespace RepositoryLayer.Services
             var alreadyExists = _context.Users.Any(u => u.Email == email);
             return alreadyExists;
         }
-        
+        public string ForgetPassword(string newToken, string email)
+        {
+
+            User user = _context.Users.FirstOrDefault(u => u.Email == email);
+            if (user != null)
+            {
+                // Construct Reset Password Link
+                string resetLink = $"http://localhost:5078/api/users/reset-password?token={newToken}";
+                return resetLink;
+            }
+            else
+            {
+                throw new Exception("User does not exist");
+            }
+        }
+
+        public bool ResetPassword(string Email, ResetPasswordModel model)
+        {
+            var user = _context.Users.FirstOrDefault(u => u.Email == Email);
+            if (user != null)
+            {
+                user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(model.NewPassWord);
+                _context.SaveChanges();
+                return true;
+            }
+            else
+            {
+                throw new Exception("User does not exist");
+            }
+
+
+        }
     }
 }

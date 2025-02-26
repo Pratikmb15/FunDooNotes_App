@@ -13,10 +13,12 @@ namespace BusinessLayer.Services
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
+        private readonly IAuthService _authService;
 
-        public UserService(IUserRepository userRepository)
+        public UserService(IUserRepository userRepository,IAuthService authService)
         {
             _userRepository = userRepository;
+            _authService = authService;
         }
 
         public IEnumerable<User> GetAllUsers() => _userRepository.GetUsers();
@@ -43,6 +45,20 @@ namespace BusinessLayer.Services
 
         public bool VerifyEmailExists(string email) { 
             return _userRepository.CheckUserExists(email);
+        }
+        public string ForgetPassword(string email)
+        {
+            User user = _userRepository.GetUserByEmail(email);
+            if (user == null)
+                throw new Exception("User does not exist");
+
+            int userId = user.Id;
+            string newToken = _authService.GenerateToken(userId, email, true);
+            return _userRepository.ForgetPassword(newToken, email);
+        }
+
+        public bool ResetPassword(string Email, ResetPasswordModel model) {
+            return _userRepository.ResetPassword(Email,model);
         }
     }
 }

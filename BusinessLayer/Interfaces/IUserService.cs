@@ -18,5 +18,7 @@ namespace BusinessLayer.Interfaces
         void UpdateUser(User user);
         void DeleteUser(int id);
         bool VerifyEmailExists(string email);
+        string ForgetPassword(string email);
+        bool ResetPassword(string Email,ResetPasswordModel model);
     }
 }

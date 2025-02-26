@@ -16,6 +16,9 @@ namespace RepositoryLayer.Interfaces
         void AddUser(RegisterModel Nuser);
         void UpdateUser(User user);
         void DeleteUser(int id);
-        bool CheckUserExists(string email);      
+        bool CheckUserExists(string email);
+        string ForgetPassword(string newToken,string email);
+        bool ResetPassword(string Email, ResetPasswordModel model);
+
     }
 }

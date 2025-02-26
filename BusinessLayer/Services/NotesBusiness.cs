@@ -41,11 +41,13 @@ namespace BusinessLayer.Services
         {
             return _notesRepository.DeleteNote(noteId, userId);
         }
-        public bool ToggleNoteDeleted(int NoteId, int UserId) {
+        public bool ToggleNoteDeleted(int NoteId, int UserId)
+        {
         return _notesRepository.checkDeletedNote(NoteId, UserId);
         }
 
-        public bool ToggleArchieved(int NoteId, int Userid) {
+        public bool ToggleArchieved(int NoteId, int Userid) 
+        {
             return _notesRepository.checkArchieved(NoteId, Userid);
         }
     }

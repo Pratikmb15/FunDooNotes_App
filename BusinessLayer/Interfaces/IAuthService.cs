@@ -8,6 +8,7 @@ namespace BusinessLayer.Interfaces
 {
     public interface IAuthService
     {
-        string GenerateToken(int userId, string email);
+        string GenerateToken(int userId, string email, bool isResetToken = false);
+        bool ValidateResetToken(string token, out string email);
     }
 }

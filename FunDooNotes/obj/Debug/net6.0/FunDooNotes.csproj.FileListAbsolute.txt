@@ -97,3 +97,10 @@ C:\Users\MILIND\source\repos\FunDooNotes\FunDooNotes\obj\Debug\net6.0\refint\Fun
 C:\Users\MILIND\source\repos\FunDooNotes\FunDooNotes\obj\Debug\net6.0\FunDooNotes.pdb
 C:\Users\MILIND\source\repos\FunDooNotes\FunDooNotes\obj\Debug\net6.0\FunDooNotes.genruntimeconfig.cache
 C:\Users\MILIND\source\repos\FunDooNotes\FunDooNotes\obj\Debug\net6.0\ref\FunDooNotes.dll
+C:\Users\MILIND\source\repos\FunDooNotes\FunDooNotes\bin\Debug\net6.0\MassTransit.dll
+C:\Users\MILIND\source\repos\FunDooNotes\FunDooNotes\bin\Debug\net6.0\MassTransit.Abstractions.dll
+C:\Users\MILIND\source\repos\FunDooNotes\FunDooNotes\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\MILIND\source\repos\FunDooNotes\FunDooNotes\bin\Debug\net6.0\Microsoft.Extensions.Diagnostics.HealthChecks.dll
+C:\Users\MILIND\source\repos\FunDooNotes\FunDooNotes\bin\Debug\net6.0\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
+C:\Users\MILIND\source\repos\FunDooNotes\FunDooNotes\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\MILIND\source\repos\FunDooNotes\FunDooNotes\bin\Debug\net6.0\System.Threading.Channels.dll

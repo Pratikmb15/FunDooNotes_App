@@ -112,6 +112,22 @@
   },
   {
     "ContainingType": "FunDooNotes.Controllers.UserController",
+    "Method": "ForgetPassword",
+    "RelativePath": "api/users/forgot-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FunDooNotes.Controllers.UserController",
     "Method": "Login",
     "RelativePath": "api/users/login",
     "HttpMethod": "POST",
@@ -134,6 +150,43 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FunDooNotes.Controllers.UserController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/users/reset-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "resetPassModel",
+        "Type": "ModelLayer.ResetPasswordModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FunDooNotes.Controllers.UserController",
+    "Method": "SetNewPassword",
+    "RelativePath": "api/users/set-newpassword/{token}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "token",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "ModelLayer.ResetPasswordModel",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
