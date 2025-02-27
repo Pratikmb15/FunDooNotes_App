@@ -1,24 +1,19 @@
 [
   {
     "ContainingType": "FunDooNotes.Controllers.NotesController",
-    "Method": "GetMyNotes",
-    "RelativePath": "api/notes",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "FunDooNotes.Controllers.NotesController",
-    "Method": "CreateNote",
-    "RelativePath": "api/notes/create",
-    "HttpMethod": "POST",
+    "Method": "UpdateNote",
+    "RelativePath": "{id}",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "noteModel",
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updatedNote",
         "Type": "ModelLayer.NoteModel",
         "IsRequired": true
       }
@@ -28,7 +23,7 @@
   {
     "ContainingType": "FunDooNotes.Controllers.NotesController",
     "Method": "DeleteNote",
-    "RelativePath": "api/notes/delete/{id}",
+    "RelativePath": "{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -44,7 +39,7 @@
   {
     "ContainingType": "FunDooNotes.Controllers.NotesController",
     "Method": "ToggleArchive",
-    "RelativePath": "api/notes/ToggleArchive/{noteId}",
+    "RelativePath": "{noteId}/ToggleArchive",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -60,7 +55,7 @@
   {
     "ContainingType": "FunDooNotes.Controllers.NotesController",
     "Method": "ToggleTrash",
-    "RelativePath": "api/notes/ToggleTrash/{noteId}",
+    "RelativePath": "{noteId}/ToggleTrash",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -74,20 +69,104 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "FunDooNotes.Controllers.NotesController",
-    "Method": "UpdateNote",
-    "RelativePath": "api/notes/update/{id}",
+    "ContainingType": "FunDooNotes.Controllers.LabelsController",
+    "Method": "CreateLabel",
+    "RelativePath": "api/labels",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "ModelLayer.LabelsModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FunDooNotes.Controllers.LabelsController",
+    "Method": "GetAll",
+    "RelativePath": "api/labels",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FunDooNotes.Controllers.LabelsController",
+    "Method": "UpdateLabel",
+    "RelativePath": "api/labels",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "LabelId",
         "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
       },
       {
-        "Name": "updatedNote",
+        "Name": "LabelName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FunDooNotes.Controllers.LabelsController",
+    "Method": "DeleteLabel",
+    "RelativePath": "api/labels",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LabelId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FunDooNotes.Controllers.LabelsController",
+    "Method": "GetLabel",
+    "RelativePath": "api/labels/GetLabelById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LabelId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FunDooNotes.Controllers.NotesController",
+    "Method": "GetMyNotes",
+    "RelativePath": "api/notes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FunDooNotes.Controllers.NotesController",
+    "Method": "CreateNote",
+    "RelativePath": "api/notes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "noteModel",
         "Type": "ModelLayer.NoteModel",
         "IsRequired": true
       }
@@ -112,6 +191,16 @@
   },
   {
     "ContainingType": "FunDooNotes.Controllers.UserController",
+    "Method": "GetProfile",
+    "RelativePath": "api/users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FunDooNotes.Controllers.UserController",
     "Method": "ForgetPassword",
     "RelativePath": "api/users/forgot-password",
     "HttpMethod": "POST",
@@ -119,8 +208,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Email",
-        "Type": "System.String",
+        "Name": "model",
+        "Type": "ModelLayer.ForgetPassModel",
         "IsRequired": true
       }
     ],
@@ -140,16 +229,6 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "FunDooNotes.Controllers.UserController",
-    "Method": "GetProfile",
-    "RelativePath": "api/users/profile",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   },
   {

@@ -20,7 +20,7 @@ namespace BusinessLayer.Services
 
         public Notes CreateNote(Notes note)
         {
-            return _notesRepository.CreateNote(note);
+            return _notesRepository.CreateNote( note);
         }
 
         public List<Notes> GetUserNotes(int userId)
@@ -32,9 +32,9 @@ namespace BusinessLayer.Services
             return _notesRepository.GetNotesById(noteId, userId);
         }
 
-        public Notes UpdateNote(Notes note)
+        public Notes UpdateNote(int UserId, Notes note)
         {
-            return _notesRepository.UpdateNote(note);
+            return _notesRepository.UpdateNote(UserId, note);
         }
 
         public bool DeleteNote(int noteId, int userId)

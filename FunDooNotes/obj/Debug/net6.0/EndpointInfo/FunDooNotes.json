@@ -5,6 +5,116 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/labels": {
+      "post": {
+        "tags": [
+          "Labels"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LabelsModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LabelsModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LabelsModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Labels"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Labels"
+        ],
+        "parameters": [
+          {
+            "name": "LabelId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "LabelName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Labels"
+        ],
+        "parameters": [
+          {
+            "name": "LabelId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/labels/GetLabelById": {
+      "get": {
+        "tags": [
+          "Labels"
+        ],
+        "parameters": [
+          {
+            "name": "LabelId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/notes": {
       "get": {
         "tags": [
@@ -15,9 +125,7 @@
             "description": "Success"
           }
         }
-      }
-    },
-    "/api/notes/create": {
+      },
       "post": {
         "tags": [
           "Notes"
@@ -48,7 +156,7 @@
         }
       }
     },
-    "/api/notes/update/{id}": {
+    "/{id}": {
       "put": {
         "tags": [
           "Notes"
@@ -88,9 +196,7 @@
             "description": "Success"
           }
         }
-      }
-    },
-    "/api/notes/delete/{id}": {
+      },
       "delete": {
         "tags": [
           "Notes"
@@ -113,7 +219,7 @@
         }
       }
     },
-    "/api/notes/ToggleArchive/{noteId}": {
+    "/{noteId}/ToggleArchive": {
       "put": {
         "tags": [
           "Notes"
@@ -136,7 +242,7 @@
         }
       }
     },
-    "/api/notes/ToggleTrash/{noteId}": {
+    "/{noteId}/ToggleTrash": {
       "put": {
         "tags": [
           "Notes"
@@ -188,6 +294,16 @@
             "description": "Success"
           }
         }
+      },
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
       }
     },
     "/api/users/login": {
@@ -221,18 +337,6 @@
         }
       }
     },
-    "/api/users/profile": {
-      "get": {
-        "tags": [
-          "User"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
     "/api/users/forgot-password": {
       "post": {
         "tags": [
@@ -242,17 +346,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/ForgetPassModel"
               }
             },
             "text/json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/ForgetPassModel"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/ForgetPassModel"
               }
             }
           }
@@ -378,6 +482,30 @@
   },
   "components": {
     "schemas": {
+      "ForgetPassModel": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LabelsModel": {
+        "type": "object",
+        "properties": {
+          "labelName": {
+            "type": "string",
+            "nullable": true
+          },
+          "notesId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "LoginRequest": {
         "type": "object",
         "properties": {

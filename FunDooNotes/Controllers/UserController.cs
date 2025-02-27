@@ -51,7 +51,7 @@ namespace FunDooNotes.Controllers
             return Ok(new { Success = true, Message = "Login successful", Token = token });
         }
 
-        [HttpGet("profile")]
+        [HttpGet]
         [Authorize]
         public IActionResult GetProfile()
         {

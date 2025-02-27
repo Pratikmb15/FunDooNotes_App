@@ -22,6 +22,9 @@ builder.Services.AddScoped<INotesBusiness, NotesBusiness>();
 builder.Services.AddScoped<INotesRepository, NotesRepository>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddSingleton<IEmailService, EmailService>();
+builder.Services.AddScoped<ILabelsRepository, LabelsRepository>();
+builder.Services.AddScoped<ILabelsService, LabelsService>();
+
 
 // 🔹 Configure JWT Authentication
 var jwtKey = builder.Configuration["Jwt:Key"];

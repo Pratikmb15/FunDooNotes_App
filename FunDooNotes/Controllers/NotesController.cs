@@ -33,7 +33,7 @@ namespace FunDooNotes.Controllers
             return Ok(new { Success = true, Data = notes });
         }
 
-        [HttpPost("create")]
+        [HttpPost]
         public IActionResult CreateNote([FromBody] NoteModel noteModel)
         {
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
@@ -53,7 +53,7 @@ namespace FunDooNotes.Controllers
             return Ok(new { Success = true, Message = "Note created successfully", Data = createdNote });
         }
 
-        [HttpPut("update/{id}")]
+        [HttpPut("/{id}")]
         public IActionResult UpdateNote(int id, [FromBody] NoteModel updatedNote)
         {
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
@@ -70,11 +70,11 @@ namespace FunDooNotes.Controllers
             existingNote.Description = updatedNote.Description;
             existingNote.Color = updatedNote.Color;
 
-            var updated = _notesBusiness.UpdateNote(existingNote);
+            var updated = _notesBusiness.UpdateNote(userId, existingNote);
             return Ok(new { Success = true, Data = updated });
         }
 
-        [HttpDelete("delete/{id}")]
+        [HttpDelete("/{id}")]
         public IActionResult DeleteNote(int id)
         {
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
@@ -86,7 +86,7 @@ namespace FunDooNotes.Controllers
             return Ok(new { Success = true, Message = "Note deleted successfully" });
         }
 
-        [HttpPut("ToggleArchive/{noteId}")]
+        [HttpPut("/{noteId}/ToggleArchive")]
         public IActionResult ToggleArchive(int noteId)
         {
 
@@ -101,7 +101,7 @@ namespace FunDooNotes.Controllers
             return Ok(new { success = true, Message = "Note Archieve Toggled Successfully",Data =$"Note Archived Status :{note.isArchive}" });
         }
 
-        [HttpPut("ToggleTrash/{noteId}")]
+        [HttpPut("/{noteId}/ToggleTrash")]
         public IActionResult ToggleTrash(int noteId)
         {
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));

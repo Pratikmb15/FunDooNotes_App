@@ -18,8 +18,9 @@ namespace RepositoryLayer.Services
             _context = context;
         }
 
-        public Notes CreateNote(Notes note)
+        public Notes CreateNote( Notes note)
         {
+
             _context.Notes.Add(note);
             _context.SaveChanges();
             return note;
@@ -32,11 +33,20 @@ namespace RepositoryLayer.Services
         public Notes GetNotesById(int noteId, int userId)
         {
             Notes note = _context.Notes.FirstOrDefault(x => x.Notes_id == noteId && x.Id == userId);
+            if (note == null)
+            { 
+            throw new Exception("Note not found");
+            }
             return note;
         }
 
-        public Notes UpdateNote(Notes note)
+        public Notes UpdateNote(int UserId, Notes note)
         {
+            var ENote = _context.Notes.FirstOrDefault(n => n.Notes_id == note.Notes_id && n.Id == UserId);
+            if (ENote == null)
+            {
+                throw new Exception("Note not found"); 
+            }
             _context.Notes.Update(note);
             _context.SaveChanges();
             return note;
