@@ -5,6 +5,67 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/Collaborator": {
+      "post": {
+        "tags": [
+          "Collaborator"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CollaboratorModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CollaboratorModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CollaboratorModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Collaborator"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Collaborator"
+        ],
+        "parameters": [
+          {
+            "name": "UserId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/labels": {
       "post": {
         "tags": [
@@ -482,6 +543,20 @@
   },
   "components": {
     "schemas": {
+      "CollaboratorModel": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "notesId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "ForgetPassModel": {
         "type": "object",
         "properties": {
@@ -493,11 +568,15 @@
         "additionalProperties": false
       },
       "LabelsModel": {
+        "required": [
+          "labelName",
+          "notesId"
+        ],
         "type": "object",
         "properties": {
           "labelName": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "notesId": {
             "type": "integer",

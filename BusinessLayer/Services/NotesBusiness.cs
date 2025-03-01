@@ -20,7 +20,7 @@ namespace BusinessLayer.Services
 
         public Notes CreateNote(Notes note)
         {
-            return _notesRepository.CreateNote( note);
+            return _notesRepository.CreateNote(note);
         }
 
         public List<Notes> GetUserNotes(int userId)

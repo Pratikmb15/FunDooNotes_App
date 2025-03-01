@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9A5FBA97-B9B9-41B5-B284-D9E596EAD775}|FunDooNotes\\FunDooNotes.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\fundoonotes\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{9A5FBA97-B9B9-41B5-B284-D9E596EAD775}|FunDooNotes\\FunDooNotes.csproj|solutionrelative:fundoonotes\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A5FBA97-B9B9-41B5-B284-D9E596EAD775}|FunDooNotes\\FunDooNotes.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\fundoonotes\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A5FBA97-B9B9-41B5-B284-D9E596EAD775}|FunDooNotes\\FunDooNotes.csproj|solutionrelative:fundoonotes\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20DC31D7-0034-4C12-A287-36B036835888}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\businesslayer\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20DC31D7-0034-4C12-A287-36B036835888}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\repositorylayer\\services\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\services\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9A5FBA97-B9B9-41B5-B284-D9E596EAD775}|FunDooNotes\\FunDooNotes.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\fundoonotes\\controllers\\notescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A5FBA97-B9B9-41B5-B284-D9E596EAD775}|FunDooNotes\\FunDooNotes.csproj|solutionrelative:fundoonotes\\controllers\\notescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A5FBA97-B9B9-41B5-B284-D9E596EAD775}|FunDooNotes\\FunDooNotes.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\fundoonotes\\fundoonotes.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9A5FBA97-B9B9-41B5-B284-D9E596EAD775}|FunDooNotes\\FunDooNotes.csproj|solutionrelative:fundoonotes\\fundoonotes.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A5FBA97-B9B9-41B5-B284-D9E596EAD775}|FunDooNotes\\FunDooNotes.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\fundoonotes\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A5FBA97-B9B9-41B5-B284-D9E596EAD775}|FunDooNotes\\FunDooNotes.csproj|solutionrelative:fundoonotes\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A5FBA97-B9B9-41B5-B284-D9E596EAD775}|FunDooNotes\\FunDooNotes.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\fundoonotes\\nlog.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{9A5FBA97-B9B9-41B5-B284-D9E596EAD775}|FunDooNotes\\FunDooNotes.csproj|solutionrelative:fundoonotes\\nlog.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9A5FBA97-B9B9-41B5-B284-D9E596EAD775}|FunDooNotes\\FunDooNotes.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\fundoonotes\\controllers\\labelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,8 +27,92 @@
       "RelativeMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\services\\notesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\repositorylayer\\services\\rediscacheservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\services\\rediscacheservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A5FBA97-B9B9-41B5-B284-D9E596EAD775}|FunDooNotes\\FunDooNotes.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\fundoonotes\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9A5FBA97-B9B9-41B5-B284-D9E596EAD775}|FunDooNotes\\FunDooNotes.csproj|solutionrelative:fundoonotes\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\repositorylayer\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\repositorylayer\\interfaces\\inotesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\interfaces\\inotesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A66463FF-3CAA-48A7-9BA5-21C946F726CC}|ModelLayer\\ModelLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\modellayer\\notesresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A66463FF-3CAA-48A7-9BA5-21C946F726CC}|ModelLayer\\ModelLayer.csproj|solutionrelative:modellayer\\notesresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{20DC31D7-0034-4C12-A287-36B036835888}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\businesslayer\\services\\notesbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20DC31D7-0034-4C12-A287-36B036835888}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\notesbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A66463FF-3CAA-48A7-9BA5-21C946F726CC}|ModelLayer\\ModelLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\modellayer\\notemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A66463FF-3CAA-48A7-9BA5-21C946F726CC}|ModelLayer\\ModelLayer.csproj|solutionrelative:modellayer\\notemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\repositorylayer\\entity\\notes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\entity\\notes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A5FBA97-B9B9-41B5-B284-D9E596EAD775}|FunDooNotes\\FunDooNotes.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\fundoonotes\\controllers\\collaboratorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A5FBA97-B9B9-41B5-B284-D9E596EAD775}|FunDooNotes\\FunDooNotes.csproj|solutionrelative:fundoonotes\\controllers\\collaboratorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\repositorylayer\\entity\\collaborator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\entity\\collaborator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\repositorylayer\\repositorylayer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\repositorylayer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20DC31D7-0034-4C12-A287-36B036835888}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\businesslayer\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20DC31D7-0034-4C12-A287-36B036835888}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A66463FF-3CAA-48A7-9BA5-21C946F726CC}|ModelLayer\\ModelLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\modellayer\\labelsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A66463FF-3CAA-48A7-9BA5-21C946F726CC}|ModelLayer\\ModelLayer.csproj|solutionrelative:modellayer\\labelsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\repositorylayer\\entity\\labels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\entity\\labels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20DC31D7-0034-4C12-A287-36B036835888}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\businesslayer\\services\\collaboratorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20DC31D7-0034-4C12-A287-36B036835888}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\collaboratorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A66463FF-3CAA-48A7-9BA5-21C946F726CC}|ModelLayer\\ModelLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\modellayer\\collaboratormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A66463FF-3CAA-48A7-9BA5-21C946F726CC}|ModelLayer\\ModelLayer.csproj|solutionrelative:modellayer\\collaboratormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\repositorylayer\\services\\collaboratorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\services\\collaboratorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A5FBA97-B9B9-41B5-B284-D9E596EAD775}|FunDooNotes\\FunDooNotes.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\fundoonotes\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A5FBA97-B9B9-41B5-B284-D9E596EAD775}|FunDooNotes\\FunDooNotes.csproj|solutionrelative:fundoonotes\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20DC31D7-0034-4C12-A287-36B036835888}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\businesslayer\\interfaces\\icollaboratorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20DC31D7-0034-4C12-A287-36B036835888}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\interfaces\\icollaboratorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\repositorylayer\\interfaces\\icollaboratorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\interfaces\\icollaboratorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20DC31D7-0034-4C12-A287-36B036835888}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\businesslayer\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20DC31D7-0034-4C12-A287-36B036835888}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\repositorylayer\\services\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\services\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20DC31D7-0034-4C12-A287-36B036835888}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\businesslayer\\interfaces\\inotesbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,24 +123,12 @@
       "RelativeMoniker": "D:0:0:{20DC31D7-0034-4C12-A287-36B036835888}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\interfaces\\ilabelsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\repositorylayer\\interfaces\\inotesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\interfaces\\inotesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\repositorylayer\\services\\labelsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\services\\labelsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A5FBA97-B9B9-41B5-B284-D9E596EAD775}|FunDooNotes\\FunDooNotes.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\fundoonotes\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A5FBA97-B9B9-41B5-B284-D9E596EAD775}|FunDooNotes\\FunDooNotes.csproj|solutionrelative:fundoonotes\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{20DC31D7-0034-4C12-A287-36B036835888}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\businesslayer\\services\\labelsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20DC31D7-0034-4C12-A287-36B036835888}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\labelsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A66463FF-3CAA-48A7-9BA5-21C946F726CC}|ModelLayer\\ModelLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\modellayer\\labelsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A66463FF-3CAA-48A7-9BA5-21C946F726CC}|ModelLayer\\ModelLayer.csproj|solutionrelative:modellayer\\labelsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20DC31D7-0034-4C12-A287-36B036835888}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\businesslayer\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -71,24 +139,12 @@
       "RelativeMoniker": "D:0:0:{20DC31D7-0034-4C12-A287-36B036835888}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20DC31D7-0034-4C12-A287-36B036835888}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\businesslayer\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20DC31D7-0034-4C12-A287-36B036835888}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\repositorylayer\\interfaces\\ilabelsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\interfaces\\ilabelsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\repositorylayer\\migrations\\20250226165614_labelsmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\migrations\\20250226165614_labelsmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\repositorylayer\\entity\\labels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\entity\\labels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\repositorylayer\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20DC31D7-0034-4C12-A287-36B036835888}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\businesslayer\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -111,16 +167,16 @@
       "RelativeMoniker": "D:0:0:{20DC31D7-0034-4C12-A287-36B036835888}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\repositorylayer\\entity\\notes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\entity\\notes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A66463FF-3CAA-48A7-9BA5-21C946F726CC}|ModelLayer\\ModelLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\modellayer\\responsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A66463FF-3CAA-48A7-9BA5-21C946F726CC}|ModelLayer\\ModelLayer.csproj|solutionrelative:modellayer\\responsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\repositorylayer\\migrations\\20250224095814_addtrashandarchive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\migrations\\20250224095814_addtrashandarchive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|c:\\users\\milind\\source\\repos\\fundoonotes\\repositorylayer\\migrations\\20250227094301_addedcollaborator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBE91B25-063D-4B13-93BA-CACB7468D36A}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\migrations\\20250227094301_addedcollaborator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -130,213 +186,254 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "INotesBusiness.cs",
-              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Interfaces\\INotesBusiness.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Interfaces\\INotesBusiness.cs",
-              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Interfaces\\INotesBusiness.cs",
-              "RelativeToolTip": "BusinessLayer\\Interfaces\\INotesBusiness.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T09:17:42.031Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "NotesController.cs",
-              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\FunDooNotes\\Controllers\\NotesController.cs",
-              "RelativeDocumentMoniker": "FunDooNotes\\Controllers\\NotesController.cs",
-              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\FunDooNotes\\Controllers\\NotesController.cs",
-              "RelativeToolTip": "FunDooNotes\\Controllers\\NotesController.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAgwGcAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T09:12:07.629Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ILabelsService.cs",
-              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Interfaces\\ILabelsService.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Interfaces\\ILabelsService.cs",
-              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Interfaces\\ILabelsService.cs",
-              "RelativeToolTip": "BusinessLayer\\Interfaces\\ILabelsService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T16:47:25.292Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LabelsController.cs",
-              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\FunDooNotes\\Controllers\\LabelsController.cs",
-              "RelativeDocumentMoniker": "FunDooNotes\\Controllers\\LabelsController.cs",
-              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\FunDooNotes\\Controllers\\LabelsController.cs",
-              "RelativeToolTip": "FunDooNotes\\Controllers\\LabelsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGgAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T16:49:57.432Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\FunDooNotes\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "FunDooNotes\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\FunDooNotes\\Controllers\\UserController.cs",
-              "RelativeToolTip": "FunDooNotes\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T05:39:19.17Z",
+              "DocumentIndex": 3,
+              "Title": "nlog.config",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\FunDooNotes\\nlog.config",
+              "RelativeDocumentMoniker": "FunDooNotes\\nlog.config",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\FunDooNotes\\nlog.config",
+              "RelativeToolTip": "FunDooNotes\\nlog.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-03-01T17:42:27.431Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "INotesRepository.cs",
-              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Interfaces\\INotesRepository.cs",
-              "RelativeDocumentMoniker": "RepositoryLayer\\Interfaces\\INotesRepository.cs",
-              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Interfaces\\INotesRepository.cs",
-              "RelativeToolTip": "RepositoryLayer\\Interfaces\\INotesRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T08:46:37.542Z"
+              "DocumentIndex": 1,
+              "Title": "FunDooNotes",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\FunDooNotes\\FunDooNotes.csproj",
+              "RelativeDocumentMoniker": "FunDooNotes\\FunDooNotes.csproj",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\FunDooNotes\\FunDooNotes.csproj",
+              "RelativeToolTip": "FunDooNotes\\FunDooNotes.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-01T17:34:39.704Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\FunDooNotes\\Program.cs",
+              "RelativeDocumentMoniker": "FunDooNotes\\Program.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\FunDooNotes\\Program.cs",
+              "RelativeToolTip": "FunDooNotes\\Program.cs",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAAAJ0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T09:54:40.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "RepositoryLayer\\Context\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "RepositoryLayer\\Context\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T16:02:39.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\FunDooNotes\\appsettings.json",
               "RelativeDocumentMoniker": "FunDooNotes\\appsettings.json",
               "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\FunDooNotes\\appsettings.json",
               "RelativeToolTip": "FunDooNotes\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAwwBsAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-02-25T09:14:48.808Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LabelsRepository.cs",
-              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Services\\LabelsRepository.cs",
-              "RelativeDocumentMoniker": "RepositoryLayer\\Services\\LabelsRepository.cs",
-              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Services\\LabelsRepository.cs",
-              "RelativeToolTip": "RepositoryLayer\\Services\\LabelsRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "NotesController.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\FunDooNotes\\Controllers\\NotesController.cs",
+              "RelativeDocumentMoniker": "FunDooNotes\\Controllers\\NotesController.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\FunDooNotes\\Controllers\\NotesController.cs",
+              "RelativeToolTip": "FunDooNotes\\Controllers\\NotesController.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAwwIUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T15:57:01.534Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\FunDooNotes\\Program.cs",
-              "RelativeDocumentMoniker": "FunDooNotes\\Program.cs",
-              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\FunDooNotes\\Program.cs",
-              "RelativeToolTip": "FunDooNotes\\Program.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAswBcAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T09:54:40.339Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Services\\UserService.cs",
-              "RelativeToolTip": "BusinessLayer\\Services\\UserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T06:27:34.613Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Services\\UserRepository.cs",
-              "RelativeDocumentMoniker": "RepositoryLayer\\Services\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Services\\UserRepository.cs",
-              "RelativeToolTip": "RepositoryLayer\\Services\\UserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T06:10:45.904Z"
+              "WhenOpened": "2025-02-24T09:12:07.629Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "RedisCacheService.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Services\\RedisCacheService.cs",
+              "RelativeDocumentMoniker": "RepositoryLayer\\Services\\RedisCacheService.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Services\\RedisCacheService.cs",
+              "RelativeToolTip": "RepositoryLayer\\Services\\RedisCacheService.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAmwB8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T06:15:59.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "NotesRepository.cs",
               "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Services\\NotesRepository.cs",
               "RelativeDocumentMoniker": "RepositoryLayer\\Services\\NotesRepository.cs",
               "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Services\\NotesRepository.cs",
               "RelativeToolTip": "RepositoryLayer\\Services\\NotesRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAuwI8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T08:46:02.201Z"
+              "WhenOpened": "2025-02-24T08:46:02.201Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
+              "Title": "LabelsController.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\FunDooNotes\\Controllers\\LabelsController.cs",
+              "RelativeDocumentMoniker": "FunDooNotes\\Controllers\\LabelsController.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\FunDooNotes\\Controllers\\LabelsController.cs",
+              "RelativeToolTip": "FunDooNotes\\Controllers\\LabelsController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwBwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T16:49:57.432Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "NotesResponseModel.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\ModelLayer\\NotesResponseModel.cs",
+              "RelativeDocumentMoniker": "ModelLayer\\NotesResponseModel.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\ModelLayer\\NotesResponseModel.cs",
+              "RelativeToolTip": "ModelLayer\\NotesResponseModel.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAIBJwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T09:19:06.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "INotesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Interfaces\\INotesRepository.cs",
+              "RelativeDocumentMoniker": "RepositoryLayer\\Interfaces\\INotesRepository.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Interfaces\\INotesRepository.cs",
+              "RelativeToolTip": "RepositoryLayer\\Interfaces\\INotesRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAIBJwBEAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T08:46:37.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "NotesBusiness.cs",
               "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Services\\NotesBusiness.cs",
               "RelativeDocumentMoniker": "BusinessLayer\\Services\\NotesBusiness.cs",
               "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Services\\NotesBusiness.cs",
               "RelativeToolTip": "BusinessLayer\\Services\\NotesBusiness.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAIBQwBwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T08:53:59.515Z"
+              "WhenOpened": "2025-02-24T08:53:59.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "NoteModel.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\ModelLayer\\NoteModel.cs",
+              "RelativeDocumentMoniker": "ModelLayer\\NoteModel.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\ModelLayer\\NoteModel.cs",
+              "RelativeToolTip": "ModelLayer\\NoteModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T09:19:15.028Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "LabelsService.cs",
-              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Services\\LabelsService.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Services\\LabelsService.cs",
-              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Services\\LabelsService.cs",
-              "RelativeToolTip": "BusinessLayer\\Services\\LabelsService.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAzwC0AAAAAAAAAAAAAAA==",
+              "Title": "Notes.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Entity\\Notes.cs",
+              "RelativeDocumentMoniker": "RepositoryLayer\\Entity\\Notes.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Entity\\Notes.cs",
+              "RelativeToolTip": "RepositoryLayer\\Entity\\Notes.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAIBQwBAAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T16:48:02.409Z"
+              "WhenOpened": "2025-02-24T07:26:26.56Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
+              "Title": "CollaboratorController.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\FunDooNotes\\Controllers\\CollaboratorController.cs",
+              "RelativeDocumentMoniker": "FunDooNotes\\Controllers\\CollaboratorController.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\FunDooNotes\\Controllers\\CollaboratorController.cs",
+              "RelativeToolTip": "FunDooNotes\\Controllers\\CollaboratorController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwEoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T09:14:26.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Collaborator.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Entity\\Collaborator.cs",
+              "RelativeDocumentMoniker": "RepositoryLayer\\Entity\\Collaborator.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Entity\\Collaborator.cs",
+              "RelativeToolTip": "RepositoryLayer\\Entity\\Collaborator.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBZwBIAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T08:51:19.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "RepositoryLayer.csproj",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\RepositoryLayer.csproj",
+              "RelativeDocumentMoniker": "RepositoryLayer\\RepositoryLayer.csproj",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\RepositoryLayer.csproj",
+              "RelativeToolTip": "RepositoryLayer\\RepositoryLayer.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-28T05:43:20.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Labels.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Entity\\Labels.cs",
+              "RelativeDocumentMoniker": "RepositoryLayer\\Entity\\Labels.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Entity\\Labels.cs",
+              "RelativeToolTip": "RepositoryLayer\\Entity\\Labels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAACBjwBYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T14:35:00.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "LabelsModel.cs",
               "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\ModelLayer\\LabelsModel.cs",
               "RelativeDocumentMoniker": "ModelLayer\\LabelsModel.cs",
               "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\ModelLayer\\LabelsModel.cs",
               "RelativeToolTip": "ModelLayer\\LabelsModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T16:01:58.208Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Services\\EmailService.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Services\\EmailService.cs",
-              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Services\\EmailService.cs",
-              "RelativeToolTip": "BusinessLayer\\Services\\EmailService.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAYwDIAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T08:44:50.921Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Services\\AuthService.cs",
-              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Services\\AuthService.cs",
-              "RelativeToolTip": "BusinessLayer\\Services\\AuthService.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwEsAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T09:52:33.686Z"
+              "WhenOpened": "2025-02-26T16:01:58.208Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -346,13 +443,209 @@
               "RelativeDocumentMoniker": "BusinessLayer\\Interfaces\\IAuthService.cs",
               "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Interfaces\\IAuthService.cs",
               "RelativeToolTip": "BusinessLayer\\Interfaces\\IAuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T06:04:18.32Z"
+              "WhenOpened": "2025-02-24T06:04:18.32Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
+              "Title": "CollaboratorModel.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\ModelLayer\\CollaboratorModel.cs",
+              "RelativeDocumentMoniker": "ModelLayer\\CollaboratorModel.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\ModelLayer\\CollaboratorModel.cs",
+              "RelativeToolTip": "ModelLayer\\CollaboratorModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T08:56:37.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "20250227094301_AddedCollaborator.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Migrations\\20250227094301_AddedCollaborator.cs",
+              "RelativeDocumentMoniker": "RepositoryLayer\\Migrations\\20250227094301_AddedCollaborator.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Migrations\\20250227094301_AddedCollaborator.cs",
+              "RelativeToolTip": "RepositoryLayer\\Migrations\\20250227094301_AddedCollaborator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T09:43:02.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CollaboratorService.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Services\\CollaboratorService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Services\\CollaboratorService.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Services\\CollaboratorService.cs",
+              "RelativeToolTip": "BusinessLayer\\Services\\CollaboratorService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T09:07:21.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CollaboratorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Services\\CollaboratorRepository.cs",
+              "RelativeDocumentMoniker": "RepositoryLayer\\Services\\CollaboratorRepository.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Services\\CollaboratorRepository.cs",
+              "RelativeToolTip": "RepositoryLayer\\Services\\CollaboratorRepository.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAgwDgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T08:58:05.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\FunDooNotes\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "FunDooNotes\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\FunDooNotes\\Controllers\\UserController.cs",
+              "RelativeToolTip": "FunDooNotes\\Controllers\\UserController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwBUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T05:39:19.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ICollaboratorService.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Interfaces\\ICollaboratorService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Interfaces\\ICollaboratorService.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Interfaces\\ICollaboratorService.cs",
+              "RelativeToolTip": "BusinessLayer\\Interfaces\\ICollaboratorService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T09:09:30.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ICollaboratorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Interfaces\\ICollaboratorRepository.cs",
+              "RelativeDocumentMoniker": "RepositoryLayer\\Interfaces\\ICollaboratorRepository.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Interfaces\\ICollaboratorRepository.cs",
+              "RelativeToolTip": "RepositoryLayer\\Interfaces\\ICollaboratorRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T08:55:24.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "INotesBusiness.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Interfaces\\INotesBusiness.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Interfaces\\INotesBusiness.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Interfaces\\INotesBusiness.cs",
+              "RelativeToolTip": "BusinessLayer\\Interfaces\\INotesBusiness.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T09:17:42.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ILabelsService.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Interfaces\\ILabelsService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Interfaces\\ILabelsService.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Interfaces\\ILabelsService.cs",
+              "RelativeToolTip": "BusinessLayer\\Interfaces\\ILabelsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T16:47:25.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "LabelsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Services\\LabelsRepository.cs",
+              "RelativeDocumentMoniker": "RepositoryLayer\\Services\\LabelsRepository.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Services\\LabelsRepository.cs",
+              "RelativeToolTip": "RepositoryLayer\\Services\\LabelsRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T15:57:01.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Services\\UserService.cs",
+              "RelativeToolTip": "BusinessLayer\\Services\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T06:27:34.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Services\\UserRepository.cs",
+              "RelativeDocumentMoniker": "RepositoryLayer\\Services\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Services\\UserRepository.cs",
+              "RelativeToolTip": "RepositoryLayer\\Services\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T06:10:45.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "LabelsService.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Services\\LabelsService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Services\\LabelsService.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Services\\LabelsService.cs",
+              "RelativeToolTip": "BusinessLayer\\Services\\LabelsService.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T16:48:02.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Services\\EmailService.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Services\\EmailService.cs",
+              "RelativeToolTip": "BusinessLayer\\Services\\EmailService.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwDIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T08:44:50.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Services\\AuthService.cs",
+              "RelativeToolTip": "BusinessLayer\\Services\\AuthService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwEsAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T09:52:33.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
               "Title": "ILabelsRepository.cs",
               "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Interfaces\\ILabelsRepository.cs",
               "RelativeDocumentMoniker": "RepositoryLayer\\Interfaces\\ILabelsRepository.cs",
@@ -360,11 +653,12 @@
               "RelativeToolTip": "RepositoryLayer\\Interfaces\\ILabelsRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T15:56:47.799Z"
+              "WhenOpened": "2025-02-26T15:56:47.799Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 35,
               "Title": "20250226165614_LabelsMigration.cs",
               "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Migrations\\20250226165614_LabelsMigration.cs",
               "RelativeDocumentMoniker": "RepositoryLayer\\Migrations\\20250226165614_LabelsMigration.cs",
@@ -372,59 +666,38 @@
               "RelativeToolTip": "RepositoryLayer\\Migrations\\20250226165614_LabelsMigration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T16:56:15.697Z"
+              "WhenOpened": "2025-02-26T16:56:15.697Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Context\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "RepositoryLayer\\Context\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Context\\AppDbContext.cs",
-              "RelativeToolTip": "RepositoryLayer\\Context\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T16:02:39.311Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Labels.cs",
-              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Entity\\Labels.cs",
-              "RelativeDocumentMoniker": "RepositoryLayer\\Entity\\Labels.cs",
-              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Entity\\Labels.cs",
-              "RelativeToolTip": "RepositoryLayer\\Entity\\Labels.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T14:35:00.147Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 36,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Interfaces\\IUserService.cs",
               "RelativeDocumentMoniker": "BusinessLayer\\Interfaces\\IUserService.cs",
               "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Interfaces\\IUserService.cs",
               "RelativeToolTip": "BusinessLayer\\Interfaces\\IUserService.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAuwBQAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAqwBQAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T06:16:01.019Z"
+              "WhenOpened": "2025-02-24T06:16:01.019Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 37,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Interfaces\\IUserRepository.cs",
               "RelativeDocumentMoniker": "RepositoryLayer\\Interfaces\\IUserRepository.cs",
               "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Interfaces\\IUserRepository.cs",
               "RelativeToolTip": "RepositoryLayer\\Interfaces\\IUserRepository.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAACBjwBEAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T06:10:11.818Z"
+              "WhenOpened": "2025-02-24T06:10:11.818Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 38,
               "Title": "ForgetPassModel.cs",
               "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\ModelLayer\\ForgetPassModel.cs",
               "RelativeDocumentMoniker": "ModelLayer\\ForgetPassModel.cs",
@@ -432,11 +705,12 @@
               "RelativeToolTip": "ModelLayer\\ForgetPassModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T08:38:15.158Z"
+              "WhenOpened": "2025-02-25T08:38:15.158Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 39,
               "Title": "ResetPasswordModel.cs",
               "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\ModelLayer\\ResetPasswordModel.cs",
               "RelativeDocumentMoniker": "ModelLayer\\ResetPasswordModel.cs",
@@ -444,11 +718,12 @@
               "RelativeToolTip": "ModelLayer\\ResetPasswordModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T08:41:41.541Z"
+              "WhenOpened": "2025-02-25T08:41:41.541Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 40,
               "Title": "IEmailService.cs",
               "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\BusinessLayer\\Interfaces\\IEmailService.cs",
               "RelativeDocumentMoniker": "BusinessLayer\\Interfaces\\IEmailService.cs",
@@ -456,23 +731,12 @@
               "RelativeToolTip": "BusinessLayer\\Interfaces\\IEmailService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T10:30:33.763Z"
+              "WhenOpened": "2025-02-25T10:30:33.763Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Notes.cs",
-              "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Entity\\Notes.cs",
-              "RelativeDocumentMoniker": "RepositoryLayer\\Entity\\Notes.cs",
-              "ToolTip": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Entity\\Notes.cs",
-              "RelativeToolTip": "RepositoryLayer\\Entity\\Notes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T07:26:26.56Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 42,
               "Title": "20250224095814_addTrashandArchive.cs",
               "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\RepositoryLayer\\Migrations\\20250224095814_addTrashandArchive.cs",
               "RelativeDocumentMoniker": "RepositoryLayer\\Migrations\\20250224095814_addTrashandArchive.cs",
@@ -480,11 +744,12 @@
               "RelativeToolTip": "RepositoryLayer\\Migrations\\20250224095814_addTrashandArchive.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T09:58:15.104Z"
+              "WhenOpened": "2025-02-24T09:58:15.104Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 41,
               "Title": "ResponseModel.cs",
               "DocumentMoniker": "C:\\Users\\MILIND\\source\\repos\\FunDooNotes\\ModelLayer\\ResponseModel.cs",
               "RelativeDocumentMoniker": "ModelLayer\\ResponseModel.cs",
@@ -492,7 +757,8 @@
               "RelativeToolTip": "ModelLayer\\ResponseModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T04:54:28.904Z"
+              "WhenOpened": "2025-02-24T04:54:28.904Z",
+              "EditorCaption": ""
             }
           ]
         }

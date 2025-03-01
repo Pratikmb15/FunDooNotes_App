@@ -8,79 +8,105 @@ using RepositoryLayer.Context;
 using RepositoryLayer.Interfaces;
 using RepositoryLayer.Services;
 using System.Text;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// 🔹 Add Database Context
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-// 🔹 Register Services & Repositories
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<INotesBusiness, NotesBusiness>();
-builder.Services.AddScoped<INotesRepository, NotesRepository>();
-builder.Services.AddScoped<IAuthService, AuthService>();
-builder.Services.AddSingleton<IEmailService, EmailService>();
-builder.Services.AddScoped<ILabelsRepository, LabelsRepository>();
-builder.Services.AddScoped<ILabelsService, LabelsService>();
+using StackExchange.Redis;
+using NLog.Web;
+using NLog;
 
 
-// 🔹 Configure JWT Authentication
-var jwtKey = builder.Configuration["Jwt:Key"];
-if (string.IsNullOrEmpty(jwtKey))
+var logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
+
+try
 {
-    throw new InvalidOperationException("JWT Key is missing from configuration.");
-}
 
-var key = Encoding.UTF8.GetBytes(jwtKey);
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(options =>
+    logger.Info("Starting the FunDooNotes API...");
+
+    var builder = WebApplication.CreateBuilder(args);
+
+    // Configure Redis
+    builder.Services.AddStackExchangeRedisCache(options =>
     {
-        options.TokenValidationParameters = new TokenValidationParameters
+        options.Configuration = "localhost:6379"; // Change this if Redis runs on another port
+    });
+
+    var redisConnectionString = builder.Configuration.GetConnectionString("Redis");
+
+    // 🔹 Add Database Context
+    builder.Services.AddDbContext<AppDbContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+    // 🔹 Register Services & Repositories
+    builder.Services.AddScoped<IUserRepository, UserRepository>();
+    builder.Services.AddScoped<IUserService, UserService>();
+    builder.Services.AddScoped<INotesBusiness, NotesBusiness>();
+    builder.Services.AddScoped<INotesRepository, NotesRepository>();
+    builder.Services.AddScoped<IAuthService, AuthService>();
+    builder.Services.AddSingleton<IEmailService, EmailService>();
+    builder.Services.AddScoped<ILabelsRepository, LabelsRepository>();
+    builder.Services.AddScoped<ILabelsService, LabelsService>();
+    builder.Services.AddScoped<ICollaboratorRepository, CollaboratorRepository>();
+    builder.Services.AddScoped<ICollaboratorService, CollaboratorService>();
+    builder.Services.AddSingleton(new RedisCacheService(redisConnectionString));
+
+    // Configure Logging
+    builder.Logging.ClearProviders();
+    builder.Host.UseNLog();
+
+
+    // 🔹 Configure JWT Authentication
+    var jwtKey = builder.Configuration["Jwt:Key"];
+    if (string.IsNullOrEmpty(jwtKey))
+    {
+        throw new InvalidOperationException("JWT Key is missing from configuration.");
+    }
+
+    var key = Encoding.UTF8.GetBytes(jwtKey);
+    builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+        .AddJwtBearer(options =>
         {
-            ValidateIssuer = true,
-            ValidateAudience = true,
-            ValidateLifetime = true,
-            ValidateIssuerSigningKey = true,
-            ValidIssuer = builder.Configuration["Jwt:Issuer"],
-            ValidAudience = builder.Configuration["Jwt:Audience"],
-            IssuerSigningKey = new SymmetricSecurityKey(key)
-        };
+            options.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuer = true,
+                ValidateAudience = true,
+                ValidateLifetime = true,
+                ValidateIssuerSigningKey = true,
+                ValidIssuer = builder.Configuration["Jwt:Issuer"],
+                ValidAudience = builder.Configuration["Jwt:Audience"],
+                IssuerSigningKey = new SymmetricSecurityKey(key)
+            };
+        });
+
+    builder.Services.AddAuthorization();
+
+    // 🔹 Enable CORS
+    builder.Services.AddCors(options =>
+    {
+        options.AddPolicy("AllowAll", builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
     });
 
-builder.Services.AddAuthorization();
+    // 🔹 Add Controllers
+    builder.Services.AddControllers();
 
-// 🔹 Enable CORS
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAll", builder =>
+    // 🔹 Configure Swagger with JWT Authentication
+    builder.Services.AddEndpointsApiExplorer();
+    builder.Services.AddSwaggerGen(options =>
     {
-        builder.AllowAnyOrigin()
-               .AllowAnyMethod()
-               .AllowAnyHeader();
-    });
-});
+        options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+        {
+            Name = "Authorization",
+            Type = SecuritySchemeType.Http,
+            Scheme = "Bearer",
+            BearerFormat = "JWT",
+            In = ParameterLocation.Header,
+            Description = "Enter 'Bearer {your_token_here}'",
+        });
 
-// 🔹 Add Controllers
-builder.Services.AddControllers();
-
-// 🔹 Configure Swagger with JWT Authentication
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(options =>
-{
-    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-    {
-        Name = "Authorization",
-        Type = SecuritySchemeType.Http,
-        Scheme = "Bearer",
-        BearerFormat = "JWT",
-        In = ParameterLocation.Header,
-        Description = "Enter 'Bearer {your_token_here}'",
-    });
-
-    options.AddSecurityRequirement(new OpenApiSecurityRequirement
-    {
+        options.AddSecurityRequirement(new OpenApiSecurityRequirement
+        {
         {
             new OpenApiSecurityScheme
             {
@@ -92,29 +118,40 @@ builder.Services.AddSwaggerGen(options =>
             },
             new string[] {}
         }
+        });
     });
-});
 
-var app = builder.Build();
+    var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    if (app.Environment.IsDevelopment())
+    {
+        app.UseSwagger();
+        app.UseSwaggerUI();
+    }
+
+    // 🔹 Apply Migrations Automatically
+    using (var scope = app.Services.CreateScope())
+    {
+        var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+        dbContext.Database.Migrate();
+    }
+
+    // 🔹 Middleware
+    app.UseCors("AllowAll");
+    app.UseHttpsRedirection();
+    app.UseAuthentication();
+    app.UseAuthorization();
+    app.MapControllers();
+
+    app.Run();
+
 }
-
-// 🔹 Apply Migrations Automatically
-using (var scope = app.Services.CreateScope())
+catch (Exception ex)
 {
-    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    dbContext.Database.Migrate();
+    logger.Error(ex, "The application encountered an error.");
+    throw;
 }
-
-// 🔹 Middleware
-app.UseCors("AllowAll");
-app.UseHttpsRedirection();
-app.UseAuthentication();
-app.UseAuthorization();
-app.MapControllers();
-
-app.Run();
+finally
+{
+    LogManager.Shutdown();
+}

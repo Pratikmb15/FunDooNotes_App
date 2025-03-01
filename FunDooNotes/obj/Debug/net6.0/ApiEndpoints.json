@@ -69,6 +69,48 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FunDooNotes.Controllers.CollaboratorController",
+    "Method": "AddCollaborator",
+    "RelativePath": "api/Collaborator",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "ModelLayer.CollaboratorModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FunDooNotes.Controllers.CollaboratorController",
+    "Method": "GetAllCollaborators",
+    "RelativePath": "api/Collaborator",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FunDooNotes.Controllers.CollaboratorController",
+    "Method": "RemoveCollaborator",
+    "RelativePath": "api/Collaborator",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FunDooNotes.Controllers.LabelsController",
     "Method": "CreateLabel",
     "RelativePath": "api/labels",

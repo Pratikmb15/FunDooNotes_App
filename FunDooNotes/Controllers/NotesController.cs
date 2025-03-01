@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Interfaces;
 using BusinessLayer.Services;
+using MassTransit.Internals.GraphValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,25 +18,40 @@ namespace FunDooNotes.Controllers
     [ApiController]
     public class NotesController : ControllerBase
     {
-
+        private readonly ICollaboratorService _collaboratorService; 
         private readonly INotesBusiness _notesBusiness;
+        private readonly ILogger<NotesController> _logger;
 
-        public NotesController(INotesBusiness notesBusiness)
+        public NotesController(INotesBusiness notesBusiness, ICollaboratorService collaboratorService, ILogger<NotesController> logger)
         {
             _notesBusiness = notesBusiness;
+            _collaboratorService = collaboratorService;
+            _logger = logger;
         }
 
         [HttpGet]
         public IActionResult GetMyNotes()
         {
+            _logger.LogInformation("Fetching all notes...");
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
             var notes = _notesBusiness.GetUserNotes(userId);
+            var Collaborators = _collaboratorService.GetCollaborators(userId);
+            if (notes == null)
+                return NotFound(new { Success = false, Message = "No notes found" });
+            if (Collaborators != null)
+            {
+                var response = new { Notes = notes, Collaborators = Collaborators };
+                return Ok(new { Success = true, Data = response });
+            }
+
+            _logger.LogInformation($"Fetched notes.");
             return Ok(new { Success = true, Data = notes });
         }
 
         [HttpPost]
         public IActionResult CreateNote([FromBody] NoteModel noteModel)
         {
+            _logger.LogInformation($"Creating a new note: {noteModel.Title}");
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
             if (userId == null)
             {
@@ -49,13 +65,14 @@ namespace FunDooNotes.Controllers
             note.Color = noteModel.Color;
 
             var createdNote = _notesBusiness.CreateNote(note);
-
+            _logger.LogInformation($"Created a new note: {note.Id}");
             return Ok(new { Success = true, Message = "Note created successfully", Data = createdNote });
         }
 
         [HttpPut("/{id}")]
         public IActionResult UpdateNote(int id, [FromBody] NoteModel updatedNote)
         {
+            _logger.LogInformation($"Creating a new note:  NoteId_{id}");
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
             if (userId == null)
             {
@@ -64,25 +81,30 @@ namespace FunDooNotes.Controllers
             var existingNote = _notesBusiness.GetUserNotes(userId).FirstOrDefault(n => n.Notes_id == id);
 
             if (existingNote == null)
+            {
                 return NotFound(new { Success = false, Message = "Note not found" });
+            }
 
             existingNote.Title = updatedNote.Title;
             existingNote.Description = updatedNote.Description;
             existingNote.Color = updatedNote.Color;
 
             var updated = _notesBusiness.UpdateNote(userId, existingNote);
+            _logger.LogInformation($"Updated note: NoteId_{id}");
             return Ok(new { Success = true, Data = updated });
         }
 
         [HttpDelete("/{id}")]
         public IActionResult DeleteNote(int id)
         {
+            _logger.LogInformation($"Deleting a note: NoteId_{id}");
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
             var deleted = _notesBusiness.DeleteNote(id, userId);
 
             if (!deleted)
                 return NotFound(new { Success = false, Message = "Note not found" });
 
+            _logger.LogInformation($"Deleted a note: NoteId_{id}");
             return Ok(new { Success = true, Message = "Note deleted successfully" });
         }
 
