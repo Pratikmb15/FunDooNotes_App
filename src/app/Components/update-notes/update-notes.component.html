@@ -1,0 +1,22 @@
+<div class="note" [style.background-color]="data.color ? data.color.toLowerCase() : 'white'">
+    <input [(ngModel)]="Title" class="title-input" [style.background-color]="data.color ? data.color.toLowerCase() : 'white'">
+
+    <textarea [(ngModel)]="Description" class="content-input" cdkTextareaAutosize #autosize="cdkTextareaAutosize"
+        cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10" [style.background-color]="data.color ? data.color.toLowerCase() : 'white'">
+    </textarea>
+
+    <div class="note-actions">
+        <div class="left-actions">
+            <app-icon-buttons></app-icon-buttons>
+
+            <button mat-icon-button matTooltip="Undo">
+                <span class="material-icons-outlined">undo</span>
+            </button>
+            <button mat-icon-button matTooltip="Redo">
+                <span class="material-icons-outlined">redo</span>
+            </button>
+        </div>
+
+        <button mat-button (click)="closeDialog()">Close</button>
+    </div>
+</div>

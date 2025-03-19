@@ -1,0 +1,46 @@
+
+<button mat-icon-button matTooltip="Remind me">
+    <span class="material-icons-outlined">notifications</span>
+  </button>
+  <button mat-icon-button matTooltip="Collaborator">
+    <span class="material-icons-outlined">person_add</span>
+  </button>
+  <button mat-icon-button matTooltip="Background options" [matMenuTriggerFor]="paletteMenu">
+    <span class="material-icons-outlined">palette</span>
+  </button>
+  <button mat-icon-button matTooltip="Add image">
+    <span class="material-icons-outlined">image</span>
+  </button>
+  <button mat-icon-button matTooltip="Archive" (click)="onArchive()">
+    <span class="material-icons-outlined">archive</span>
+  </button>
+  <!-- More options menu -->
+<mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="onDelete()">
+      <span class="material-icons-outlined" >delete</span>
+      <span>Delete</span>
+    </button>
+    <button mat-menu-item>
+      <span class="material-icons-outlined">content_copy</span>
+      <span>Duplicate</span>
+    </button>
+    <button mat-menu-item>
+      <span class="material-icons-outlined">label</span>
+      <span>Add label</span>
+    </button>
+  </mat-menu>
+  
+  <!-- More button triggering the menu -->
+  <button mat-icon-button [matMenuTriggerFor]="menu" matTooltip="More">
+    <span class="material-icons-outlined">more_vert</span>
+  </button>
+
+  <mat-menu #paletteMenu="matMenu" class="colorpaletteMenu" panelClass="custom-palette-menu">
+    <div class="color-container">
+      <button class="colorIcon" *ngFor="let color of colorArray" 
+        [style.background]="color.code" 
+        (click)="SelectColor(color)">
+      </button>
+    </div>
+  </mat-menu>
+  

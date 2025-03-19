@@ -1,0 +1,212 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e6e7ea;
+    padding: 20px;
+}
+
+.login-card {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 900px; 
+    padding: 48px 40px 36px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.login-content {
+    display: flex;
+    width: 100%;
+}
+
+.left-section {
+    width: 40%; /* Adjust as needed */
+    padding-right: 40px; /* Space between left and right sections */
+    text-align: left;
+}
+
+.right-section {
+    width: 60%; /* Adjust as needed */
+    padding-right: 25px;
+}
+
+.google-logo {
+    width: 75px;
+    height: auto;
+    margin-bottom: 2px;
+}
+
+.sign-in-title {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: #202124;
+}
+
+.sign-in-subtitle {
+    font-size: 16px;
+    margin-bottom: 32px;
+    color: #202124;
+}
+
+.form-field {
+    width: 100%;
+    margin-bottom: 24px;
+    position: relative;
+
+    input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #dadce0;
+        border-radius: 4px;
+        font-size: 16px;
+        color: #202124;
+
+        &:focus {
+            outline: none;
+            border-color: #1a73e8;
+        }
+    }
+}
+
+.forgot-password {
+    text-align: left;
+    margin-bottom: 32px;
+
+    a {
+        color: #1a73e8;
+        text-decoration: none;
+        font-weight: 500;
+    }
+}
+
+.guest-mode-text {
+    font-size: 14px;
+    color: #5f6368;
+    margin-bottom: 32px;
+
+    a {
+        color: #1a73e8;
+        text-decoration: none;
+        font-weight: 500;
+    }
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .NextButton {
+        background-color: #1a73e8;
+        border-radius: 16px;
+        color: #ffffff;
+        padding: 10px 24px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .create-account {
+        color: #1a73e8;
+        text-decoration: none;
+        font-weight: 500;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 450px;
+    margin-top: 16px;
+    padding: 0 8px;
+
+    a {
+        color: #5f6368;
+        text-decoration: none;
+        font-size: 12px;
+        padding-left: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-card {
+        height: auto;
+        padding: 24px;
+    }
+
+    .login-content {
+        flex-direction: column;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .left-section {
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    .google-logo {
+        margin-bottom: 16px;
+    }
+
+    .sign-in-title {
+        font-size: 20px;
+    }
+
+    .sign-in-subtitle {
+        font-size: 14px;
+    }
+
+    .form-field input {
+        padding: 10px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        align-items: stretch;
+
+        .NextButton {
+            margin-bottom: 16px;
+        }
+    }
+
+    .footer {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 10px;
+    }
+
+    .login-card {
+        padding: 16px;
+    }
+
+    .sign-in-title {
+        font-size: 18px;
+    }
+
+    .sign-in-subtitle {
+        font-size: 12px;
+    }
+
+    .form-field input {
+        padding: 8px;
+    }
+
+    .footer a {
+        font-size: 10px;
+    }
+}

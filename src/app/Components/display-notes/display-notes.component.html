@@ -1,0 +1,54 @@
+<div class="display-notes">
+  <div class="notes-container">
+    <!-- Loading state -->
+    <div class="loading-container" *ngIf="loading">
+      <mat-spinner diameter="40"></mat-spinner>
+      <p>Loading notes...</p>
+    </div>
+
+    <!-- Error state -->
+    <div class="error-container" *ngIf="error">
+      <span class="material-icons-outlined error-icon">error_outline</span>
+      <p>{{ error }}</p>
+      <button mat-raised-button color="primary" (click)="onRetry()">Retry</button>
+    </div>
+
+    <!-- Empty state -->
+    <div class="empty-container" *ngIf="!loading && !error && notes.length === 0">
+      <span class="material-icons-outlined empty-icon">lightbulb_outline</span>
+      <p>Notes you add appear here</p>
+    </div>
+
+    <!-- Notes grid -->
+    <div class="notes-grid" *ngIf="!loading && !error && notes.length > 0">
+      <div class="note-card" *ngFor="let note of notes" 
+           [class.selected]="note.isSelected"
+           [style.background-color]="note.color ? note.color.toLowerCase() : 'white'">
+        <div class="note-content">
+          <!-- Selection checkbox - only visible on hover or when selected -->
+          <button mat-icon-button class="select-button" (click)="toggleSelect(note, $event)">
+            <span class="material-icons-outlined" *ngIf="!note.isSelected">check_box_outline_blank</span>
+            <span class="material-icons-outlined selected" *ngIf="note.isSelected">check_box</span>
+          </button>
+
+          <!-- Pin button - always visible -->
+          <button mat-icon-button class="pin-button" (click)="togglePin(note); $event.stopPropagation()">
+            <span class="material-icons-outlined" [class.pinned]="note.isPinned">push_pin</span>
+          </button>
+
+          <!-- Note title and content -->
+          <div class="note-text" (click)="editNoteDialogBox(note)">
+            <div class="note-title" *ngIf="note.title">{{ note.title }}</div>
+            <div class="note-body">{{ note.description }}</div>
+          </div>
+
+          <!-- Action buttons - only visible on hover -->
+          <div class="note-actions">
+           
+            <app-icon-buttons [notesObject]="note"></app-icon-buttons>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

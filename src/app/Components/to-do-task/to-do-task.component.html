@@ -1,0 +1,22 @@
+<div class="container">
+    <mat-card class="app-content">
+        <h2 class="title">ToDo App</h2>
+
+        <h3 class="sub-title">Add Todo</h3>
+        <mat-form-field appearance="outline">
+            <mat-label>Enter a task...</mat-label>
+            <input matInput [(ngModel)]="newtask" />
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="addTask()">Add</button>
+
+        <mat-list>
+            <mat-list-item ngfor *ngFor="let task of tasks; let i = index">
+                <mat-checkbox [(ngModel)]="task.done" (change)="toggleTaskStatus(i)"></mat-checkbox>
+                <span [class.done]="task.done">{{task.task}}</span>
+                <button mat-icon-button color="warn" (click)="deleteTask(i)" class="deletebutton">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </mat-list-item>
+        </mat-list>
+    </mat-card>
+</div>

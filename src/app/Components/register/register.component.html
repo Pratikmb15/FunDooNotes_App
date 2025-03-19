@@ -1,0 +1,42 @@
+<div class="register-container">
+    <mat-card class="register-card">
+        <div class="register-content">
+            <div class="left-section">
+                <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" alt="Google"
+                    class="google-logo">
+                <h1 class="sign-up-title">Create a Google Account</h1>
+                <p class="sign-up-subtitle">Enter your Details</p>
+            </div>
+            <div class="right-section">
+                <form [formGroup]="registerForm" (ngSubmit)="Register()">
+
+                    <div class="form-field">
+                        <input formControlName="FirstName" type="FirstName" placeholder="First Name">
+                    </div>
+
+                    <div class="form-field">
+                        <input formControlName="LastName" type="LastName" placeholder="Last Name">
+                    </div>
+
+                    <div class="form-field">
+                        <input formControlName="email" type="email" placeholder="Email or phone">
+                    </div>
+
+                    <div class="form-field">
+                        <input formControlName="password" placeholder="Password">
+                    </div>
+
+                    <div class="action-buttons">
+                        <button mat-raised-button type="submit" class="NextButton">Next</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </mat-card>
+
+    <div class="footer">
+        <a href="#">Help</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+    </div>
+</div>

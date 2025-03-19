@@ -1,0 +1,43 @@
+
+<div class="login-container">
+    <mat-card class="login-card">
+        <div class="login-content">
+            <div class="left-section">
+                <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" alt="Google"
+                    class="google-logo">
+                <h1 class="sign-in-title">Sign in</h1>
+                <p class="sign-in-subtitle">Use your Google Account</p>
+            </div>
+            <div class="right-section">
+                <form  [formGroup]="loginForm" (ngSubmit)="Login()">
+                    <div class="form-field">
+                        <input formControlName="email" type="email" placeholder="Email or phone">
+                    </div>
+
+                    <div class="form-field">
+                        <input formControlName="password" placeholder="Password">
+                    </div>
+
+                    <div class="forgot-password">
+                        <a href="#">Forgot password?</a>
+                    </div>
+
+                    <div class="guest-mode-text">
+                        <p>Not your computer? Use Guest mode to sign in privately. <a href="#">Learn more</a></p>
+                    </div>
+
+                    <div class="action-buttons">
+                        <a href="#" class="create-account">Create account</a>
+                        <button mat-raised-button type="submit" class="NextButton">Next</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </mat-card>
+
+    <div class="footer">
+        <a href="#">Help</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+    </div>
+</div>

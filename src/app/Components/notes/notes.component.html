@@ -1,0 +1,64 @@
+<div class="notes-container-wrapper">
+  <div class="notes-wrapper">
+    <div class="notes-container" [@expandCollapse]="isExpanded ? 'expanded' : 'collapsed'">
+
+      <!-- Collapsed State -->
+      <div class="note-input" *ngIf="!isExpanded">
+        <input placeholder="Take a note..." readonly (click)="expandNote()"> <!-- Add click handler here -->
+        <div class="quick-actions">
+          <button mat-icon-button>
+            <span class="material-icons-outlined">check_box</span>
+          </button>
+          <button mat-icon-button>
+            <span class="material-icons-outlined">brush</span>
+          </button>
+          <button mat-icon-button>
+            <span class="material-icons-outlined">image</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Expanded State -->
+      <div class="note-expanded" *ngIf="isExpanded">
+        <form [formGroup]="noteForm" (ngSubmit)="closeNote($event)">
+          <input formControlName="Title" type="Title" placeholder="Title" [(ngModel)]="noteTitle" class="title-input">
+
+          <textarea formControlName="Description" type="Description" placeholder="Take a note..."
+            [(ngModel)]="noteContent" class="content-input" cdkTextareaAutosize #autosize="cdkTextareaAutosize"
+            cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10">
+          </textarea>
+
+          <div class="note-actions">
+            <div class="left-actions">
+              <app-icon-buttons></app-icon-buttons>
+
+              <button mat-icon-button matTooltip="Undo">
+                <span class="material-icons-outlined">undo</span>
+              </button>
+              <button mat-icon-button matTooltip="Redo">
+                <span class="material-icons-outlined">redo</span>
+              </button>
+            </div>
+
+            <button mat-button type="submit">Close</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <span class="material-icons-outlined">delete</span>
+      <span>Delete note</span>
+    </button>
+    <button mat-menu-item>
+      <span class="material-icons-outlined">label</span>
+      <span>Add label</span>
+    </button>
+    <button mat-menu-item>
+      <span class="material-icons-outlined">content_copy</span>
+      <span>Make a copy</span>
+    </button>
+  </mat-menu>
+</div>

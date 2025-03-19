@@ -1,0 +1,58 @@
+<div class="app-container">
+  <mat-toolbar color="primary" class="toolbar">
+    <div class="toolbar-left">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <div class="logo-container">
+        <mat-icon>description</mat-icon>
+        <span class="app-title">{{title}}</span>
+      </div>
+    </div>
+
+
+    <div class="search-container">
+      <mat-form-field appearance="outline" class="custom-form-field">
+        <mat-icon matPrefix>search</mat-icon>
+        <input matInput placeholder="Search" [(ngModel)]="searchText" type="search">
+      </mat-form-field>
+    </div>
+
+
+    <div class="toolbar-right">
+      <button mat-icon-button>
+        <mat-icon>refresh</mat-icon>
+      </button>
+
+      <button mat-icon-button>
+        <mat-icon>view_agenda</mat-icon>
+      </button>
+
+      <button mat-icon-button>
+        <mat-icon>settings</mat-icon>
+      </button>
+
+      <button mat-icon-button class="apps-icon">
+        <mat-icon>apps</mat-icon>
+      </button>
+
+      <button mat-icon-button class="user-avatar">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="side" opened class="sidenav">
+      <mat-nav-list>
+        <mat-list-item *ngFor="let item of navItems">
+          <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
+          <span matListItemTitle>{{item.name}}</span>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="content">
+      <router-outlet></router-outlet> 
+    </mat-sidenav-content>
