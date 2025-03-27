@@ -33,6 +33,9 @@ import { IconButtonsComponent } from './Components/icon-buttons/icon-buttons.com
 import { GetNotesComponent } from './Components/get-notes/get-notes.component';
 import { UpdateNotesComponent } from './Components/update-notes/update-notes.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { ArchiveNotesComponent } from './Components/archive-notes/archive-notes.component';
+import { TrashNotesComponent } from './Components/trash-notes/trash-notes.component';
 
 
 
@@ -49,7 +52,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     DisplayNotesComponent,
     IconButtonsComponent,
     GetNotesComponent,
-    UpdateNotesComponent
+    UpdateNotesComponent,
+    ArchiveNotesComponent,
+    TrashNotesComponent
   ],
   imports: [
     BrowserModule,
@@ -73,6 +78,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatMenuTrigger,
     MatProgressSpinnerModule,
     MatDialogModule,
+    MatSnackBarModule,
     
   ],
   providers: [

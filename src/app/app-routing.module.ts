@@ -10,6 +10,8 @@ import { NotesComponent } from './Components/notes/notes.component';
 import { DisplayNotesComponent } from './Components/display-notes/display-notes.component';
 import { IconButtonsComponent } from './Components/icon-buttons/icon-buttons.component';
 import { GetNotesComponent } from './Components/get-notes/get-notes.component';
+import { ArchiveNotesComponent } from './Components/archive-notes/archive-notes.component';
+import { TrashNotesComponent } from './Components/trash-notes/trash-notes.component';
 
 const routes: Routes = [
   {path:'Login',component:LoginComponent},
@@ -23,6 +25,8 @@ const routes: Routes = [
     component: DashboardComponent,
     children: [
       { path: '', component: GetNotesComponent }, // Child route of NotesComponent
+      {path: 'Archive',component:ArchiveNotesComponent},
+      {path:'Trash',component:TrashNotesComponent}
       //{ path: '', redirectTo: 'notes', pathMatch: 'full' }, 
     ],
   },

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { UserService } from '../../Services/User/user.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { UserService } from '../../Services/User/user.service';
 })
 export class LoginComponent implements OnInit {
   loginForm !: FormGroup
-  constructor(private formbuild: FormBuilder, private user: UserService) { }
+  constructor(private formbuild: FormBuilder, private user: UserService,private snackBar: MatSnackBar ) { }
   ngOnInit(): void {
     this.loginForm = this.formbuild.group({
       email: [''],
@@ -26,7 +27,8 @@ export class LoginComponent implements OnInit {
     }
     return this.user.Login(reqData).subscribe((res: any) => {
       console.log(res)
-      localStorage.setItem("token", res.token)
+      localStorage.setItem("token", res.token);
+      this.snackBar.open('Login Successful','',{duration:5000});
     })
   }
 }

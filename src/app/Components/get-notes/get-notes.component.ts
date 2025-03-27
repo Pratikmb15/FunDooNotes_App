@@ -45,7 +45,7 @@ export class GetNotesComponent implements OnInit {
             ...note,
             isPinned: false, // Default value
             isSelected: false, // Default value
-          }));
+          })).filter((note:Note )=>!note.isArchive&& !note.isDeleted);
         } else {
           this.error = 'Invalid response format';
           console.error('Invalid response format:', response);

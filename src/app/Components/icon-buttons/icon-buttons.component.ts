@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NotesService } from '../../Services/Note/notes.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -30,7 +31,7 @@ export class IconButtonsComponent implements OnInit{
     { code: '#D3D3D3', name: 'grey' },
   ];
 
-  constructor(private notesService:NotesService){}
+  constructor(private notesService:NotesService,private snackBar: MatSnackBar){}
   ngOnInit(): void {
   }
   onDelete() {
@@ -45,9 +46,12 @@ export class IconButtonsComponent implements OnInit{
     this.notesService.trashNotes(noteId).subscribe({
       next: (res: any) => {
         console.log('Note trashed successfully', res);
+        this.snackBar.open('Note trashed Successfully','',{duration:5000});
+
       },
       error: (err) => {
         console.error('Error trashing note:', err);
+        this.snackBar.open('Note trashed Failed','',{duration:5000});
       }
     });
   }
@@ -62,6 +66,7 @@ export class IconButtonsComponent implements OnInit{
    
     this.notesService.ArchiveNotes(noteId).subscribe((res:any)=>{
       console.log('Note Archieved successfully ',res);
+      this.snackBar.open('Note Archieved Successfully','',{duration:5000});
     }) 
   }
 

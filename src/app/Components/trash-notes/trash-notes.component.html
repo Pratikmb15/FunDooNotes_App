@@ -1,0 +1,47 @@
+<div class="display-notes">
+    <div class="notes-container">
+      <!-- Loading state -->
+      <div class="loading-container" *ngIf="loading">
+        <mat-spinner diameter="40"></mat-spinner>
+        <p>Loading notes...</p>
+      </div>
+  
+      <!-- Error state -->
+      <div class="error-container" *ngIf="error">
+        <span class="material-icons-outlined error-icon">error_outline</span>
+        <p>{{ error }}</p>
+        <button mat-raised-button color="primary" (click)="onRetry()">Retry</button>
+      </div>
+  
+      <!-- Empty state -->
+      <div class="empty-container" *ngIf="!loading && !error && notes.length === 0">
+        <p>Notes you trash will appear here</p>
+      </div>
+  
+      <!-- Notes grid -->
+      <div class="notes-grid" *ngIf="!loading && !error && notes.length > 0">
+        <div class="note-card" *ngFor="let note of notes" 
+             [class.selected]="note.isSelected"
+             [style.background-color]="note.color ? note.color.toLowerCase() : 'white'">
+          <div class="note-content"> 
+            <!-- Note title and content -->
+            <div class="note-text" >
+              <div class="note-title" *ngIf="note.title">{{ note.title }}</div>
+              <div class="note-body">{{ note.description }}</div>
+            </div>
+  
+            <!-- Action buttons - only visible on hover -->
+            <div class="note-actions">
+                <button mat-icon-button matTooltip="Restore note " (click)="restoreNote(note)">
+                <span  class="material-symbols-outlined" >restore_from_trash</span>
+            </button>
+            <button mat-icon-button matTooltip="delete note forever " (click)="deleteNoteForever(note)">
+                <span class="material-symbols-outlined">delete_forever</span>
+            </button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
