@@ -1,7 +1,8 @@
-import { Component, type OnInit } from "@angular/core"
+import { Component, Output, type OnInit,EventEmitter } from "@angular/core"
 import { trigger, state, style, transition, animate } from "@angular/animations";
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { NotesService } from '../../Services/Note/notes.service';
+
 
 
 
@@ -31,6 +32,8 @@ import { NotesService } from '../../Services/Note/notes.service';
   ]
 })
 export class NotesComponent  implements OnInit{
+  @Output() refreshEventCreate =  new  EventEmitter();
+  
   noteForm !:FormGroup
   isExpanded = false
   noteTitle = ""
@@ -69,6 +72,7 @@ export class NotesComponent  implements OnInit{
         console.log("Response:", res);
         this.isExpanded = false; 
         this.noteForm.reset(); 
+        this.refreshEventCreate.emit(res);
       },
       (error) => {
         console.error("Error Response:", error);

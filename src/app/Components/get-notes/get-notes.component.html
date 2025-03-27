@@ -1,6 +1,7 @@
-<app-notes></app-notes>
+<app-notes (refreshEventCreate)="recievedRefreshEventCreate($event)"></app-notes>
 <app-display-notes
   [notes]="notes"
   [loading]="loading"
-  [error]="error"
+  [error]="error" 
+  (UpdateAutoRefresh)="recievedRefreshFromDisplaytoGetall($event)"
 ></app-display-notes>

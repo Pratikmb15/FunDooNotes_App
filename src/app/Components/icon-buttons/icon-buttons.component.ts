@@ -81,6 +81,7 @@ export class IconButtonsComponent implements OnInit{
     this.notesService.UpdateNotesColor(noteId,reqData).subscribe(
       (res: any) => {
         console.log(res);
+        this.notesObject.color=colors.code ;
        
       },
       (error) => {

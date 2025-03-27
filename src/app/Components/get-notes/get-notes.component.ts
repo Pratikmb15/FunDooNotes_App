@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, input, OnInit } from '@angular/core';
 import { NotesService } from '../../Services/Note/notes.service';
 import { DisplayNotesComponent } from "../display-notes/display-notes.component";
 
@@ -22,6 +22,8 @@ interface Note {
  
 })
 export class GetNotesComponent implements OnInit {
+
+
   notes: Note[] = [];
   loading = true;
   error = '';
@@ -56,5 +58,14 @@ export class GetNotesComponent implements OnInit {
         this.loading = false;
       },
     });
+  }
+  recievedRefreshFromDisplaytoGetall($event:any){
+    console.log("display to getall notes"+ $event);
+    this.fetchNotes();
+  }
+
+  recievedRefreshEventCreate($event:any){
+    console.log("create notes to getall notes"+$event);
+    this.fetchNotes();
   }
 }

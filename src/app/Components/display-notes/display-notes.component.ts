@@ -25,6 +25,7 @@ export class DisplayNotesComponent implements OnInit {
   @Input() loading: boolean = false; 
   @Input() error: string = ''; 
   @Output() retry = new EventEmitter<void>(); 
+  @Output() UpdateAutoRefresh = new EventEmitter();
 
   // notesObject:any
   selectedNote: Note | null = null;
@@ -43,6 +44,7 @@ export class DisplayNotesComponent implements OnInit {
 
   dialogbox.afterClosed().subscribe(result => {
     console.log(result);
+    this.UpdateAutoRefresh.emit(result);
   });
 }
 
@@ -73,6 +75,6 @@ export class DisplayNotesComponent implements OnInit {
     console.log('Note trashed:', note);
   }
   onRetry() {
-    this.retry.emit(); // Notify parent component to retry
+    this.retry.emit(); 
   }
 }
