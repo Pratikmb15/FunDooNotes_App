@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { UpdateNotesComponent } from '../update-notes/update-notes.component';
+import { DataService } from '../../Services/dataService/data.service';
+import { response } from 'express';
 
 interface Note {
   notes_id: number;
@@ -21,39 +23,44 @@ interface Note {
   styleUrl: './display-notes.component.scss',
 })
 export class DisplayNotesComponent implements OnInit {
-  @Input() notes: Note[] = []; 
-  @Input() loading: boolean = false; 
-  @Input() error: string = ''; 
-  @Output() retry = new EventEmitter<void>(); 
+  @Input() notes: Note[] = [];
+  @Input() loading: boolean = false;
+  @Input() error: string = '';
+  @Output() retry = new EventEmitter<void>();
   @Output() UpdateAutoRefresh = new EventEmitter();
 
   // notesObject:any
   selectedNote: Note | null = null;
+  filterNote: any;
 
-  constructor(public dialog:MatDialog) {}
+  constructor(public dialog: MatDialog, private data: DataService) { }
 
   ngOnInit(): void {
-  
+    this.data.incomingData.subscribe((response) => {
+      console.log("Search in progress", response);
+      this.filterNote = response;
+    })
+
   }
   editNoteDialogBox(note: Note) {
-  const dialogbox = this.dialog.open(UpdateNotesComponent, {
-    width: '40%',
-    height: 'auto',
-    data: note // Pass the specific note object
-  });
+    const dialogbox = this.dialog.open(UpdateNotesComponent, {
+      width: '40%',
+      height: 'auto',
+      data: note // Pass the specific note object
+    });
 
-  dialogbox.afterClosed().subscribe(result => {
-    console.log(result);
-    this.UpdateAutoRefresh.emit(result);
-  });
-}
+    dialogbox.afterClosed().subscribe(result => {
+      console.log(result);
+      this.UpdateAutoRefresh.emit(result);
+    });
+  }
 
   togglePin(note: Note) {
     note.isPinned = !note.isPinned;
   }
 
   setSelectedNote(note: Note, event: Event) {
-    event.stopPropagation(); 
+    event.stopPropagation();
     this.selectedNote = note;
   }
 
@@ -75,6 +82,6 @@ export class DisplayNotesComponent implements OnInit {
     console.log('Note trashed:', note);
   }
   onRetry() {
-    this.retry.emit(); 
+    this.retry.emit();
   }
 }

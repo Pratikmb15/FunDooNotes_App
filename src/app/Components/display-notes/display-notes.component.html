@@ -20,8 +20,8 @@
     </div>
 
     <!-- Notes grid -->
-    <div class="notes-grid" *ngIf="!loading && !error && notes.length > 0">
-      <div class="note-card" *ngFor="let note of notes" 
+    <div class="notes-grid" *ngIf="!loading && !error && notes.length > 0 ">
+      <div class="note-card" *ngFor="let note of notes | filter:filterNote" 
            [class.selected]="note.isSelected"
            [style.background-color]="note.color ? note.color.toLowerCase() : 'white'">
         <div class="note-content">
@@ -51,4 +51,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> 

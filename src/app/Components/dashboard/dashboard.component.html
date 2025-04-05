@@ -15,7 +15,7 @@
     <div class="search-container">
       <mat-form-field appearance="outline" class="custom-form-field">
         <mat-icon matPrefix>search</mat-icon>
-        <input matInput placeholder="Search" [(ngModel)]="searchText" type="search">
+        <input matInput placeholder="Search" [(ngModel)]="searchText" type="search" (keyup)="search($event)">
       </mat-form-field>
     </div>
 
@@ -46,7 +46,7 @@
   <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #sidenav mode="side" opened class="sidenav">
       <mat-nav-list>
-        <mat-list-item *ngFor="let item of navItems">
+        <mat-list-item *ngFor="let item of navItems"(click)="navigateTo(item.route)">
           <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
           <span matListItemTitle>{{item.name}}</span>
         </mat-list-item>

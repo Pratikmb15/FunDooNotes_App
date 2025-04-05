@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { UserService } from '../../Services/User/user.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class LoginComponent implements OnInit {
   loginForm !: FormGroup
-  constructor(private formbuild: FormBuilder, private user: UserService,private snackBar: MatSnackBar ) { }
+  constructor(private router: Router,private formbuild: FormBuilder, private user: UserService,private snackBar: MatSnackBar ) { }
   ngOnInit(): void {
     this.loginForm = this.formbuild.group({
       email: [''],
@@ -29,6 +30,7 @@ export class LoginComponent implements OnInit {
       console.log(res)
       localStorage.setItem("token", res.token);
       this.snackBar.open('Login Successful','',{duration:5000});
+      this.router.navigate(['/Home']);
     })
   }
 }

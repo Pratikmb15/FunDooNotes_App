@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { UserService } from '../../Services/User/user.service';
 @Component({
@@ -9,7 +10,7 @@ import { UserService } from '../../Services/User/user.service';
 })
 export class RegisterComponent implements OnInit {
   registerForm !:FormGroup
-    constructor(private formbuild: FormBuilder, private user: UserService) { }
+    constructor(private router: Router,private formbuild: FormBuilder, private user: UserService) { }
     ngOnInit(): void {
       this.registerForm = this.formbuild.group({
         FirstName:[''],
@@ -25,7 +26,10 @@ export class RegisterComponent implements OnInit {
         email: this.registerForm.value.email,
         password: this.registerForm.value.password
       }
-      return this.user.Register(reqData).subscribe((res:any)=>console.log(res))
+      return this.user.Register(reqData).subscribe((res:any)=>{
+        console.log(res)
+        this.router.navigate(['/Login']);
+      })
     }
 
 }

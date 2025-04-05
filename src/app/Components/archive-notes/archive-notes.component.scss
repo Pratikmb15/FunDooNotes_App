@@ -186,5 +186,12 @@
       color: #5f6368;
     }
   }
-  
+  .empty-container{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .empty-icon{
+      margin-left: 415px;
+    }
+  }
   

@@ -36,6 +36,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { ArchiveNotesComponent } from './Components/archive-notes/archive-notes.component';
 import { TrashNotesComponent } from './Components/trash-notes/trash-notes.component';
+import { FilterPipe } from './Pipes/filter.pipe';
 
 
 
@@ -54,7 +55,8 @@ import { TrashNotesComponent } from './Components/trash-notes/trash-notes.compon
     GetNotesComponent,
     UpdateNotesComponent,
     ArchiveNotesComponent,
-    TrashNotesComponent
+    TrashNotesComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
