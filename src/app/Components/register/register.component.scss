@@ -1,4 +1,61 @@
-.register-container {
+
+.custom-form-field {
+    .mat-form-field-wrapper {
+      padding-bottom: 0;
+    }
+  
+    .mat-form-field-flex {
+      padding: 0 0.75em;
+      margin-top: -0.25em;
+      align-items: center;
+      min-height: 44px; 
+    }
+  
+    .mat-form-field-infix {
+      padding: 0.5em 0;
+      border-top: 0.5em solid transparent;
+    }
+  
+    .mat-input-element {
+      height: 1.8em;
+      line-height: 1.8em;
+      font-size: 14px;
+      padding: 0 0 0.15em 0; 
+    }
+  
+    .mat-form-field-label-wrapper {
+      top: -1.25em;
+    }
+
+    .mat-form-field-outline {
+      color: #dadce0;
+      top: 0.15em; 
+    }
+    
+    .mat-form-field-outline-thick {
+      color: #1a73e8;
+    }
+  
+
+    .mat-error {
+      font-size: 12px;
+      margin-top: 0.25em;
+      line-height: 1.2;
+    }
+
+    .error-list {
+      margin: 4px 0 0 0;
+      padding-left: 20px;
+      
+      li {
+        font-size: 11px;
+        line-height: 1.4;
+      }
+    }
+  }
+  
+
+  .register-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,9 +63,9 @@
     min-height: 100vh;
     background-color: #e6e7ea;
     padding: 20px;
-}
-
-.register-card {
+  }
+  
+  .register-card {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -17,167 +74,157 @@
     background-color: #ffffff;
     border-radius: 16px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-
-.register-content {
+  }
+  
+  .register-content {
     display: flex;
     width: 100%;
-}
-
-.left-section {
-    width: 40%; /* Adjust as needed */
-    padding-right: 40px; /* Space between left and right sections */
+  }
+  
+  .left-section {
+    width: 40%;
+    padding: 90px 40px;
+    padding-right: 40px;
     text-align: left;
-}
-
-.right-section {
-    width: 60%; /* Adjust as needed */
+  }
+  
+  .right-section {
+    width: 60%;
     padding-right: 25px;
-}
-
-.google-logo {
+  }
+  
+  .google-logo {
     width: 75px;
     height: auto;
     margin-bottom: 2px;
-}
-
-.sign-up-title {
+  }
+  
+  .sign-up-title {
     font-size: 24px;
     font-weight: 400;
     margin-bottom: 8px;
     color: #202124;
-}
-
-.sign-up-subtitle {
+  }
+  
+  .sign-up-subtitle {
     font-size: 16px;
     margin-bottom: 32px;
     color: #202124;
-}
-
-.form-field {
+  }
+  
+  .form-field {
     width: 100%;
     margin-bottom: 24px;
     position: relative;
-
-    input {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #dadce0;
-        border-radius: 4px;
-        font-size: 16px;
-        color: #202124;
-
-        &:focus {
-            outline: none;
-            border-color: #1a73e8;
-        }
-    }
-}
-
-.action-buttons {
+  }
+  
+  .action-buttons {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     width: 100%;
-
+  
     .NextButton {
-        background-color: #1a73e8;
-        border-radius: 16px;
-        color: #ffffff;
-        padding: 10px 24px;
-        border: none;
-        cursor: pointer;
+      background-color: #1a73e8;
+      border-radius: 16px;
+      color: #ffffff;
+      padding: 10px 24px;
+      border: none;
+      cursor: pointer;
     }
-}
-
-.footer {
+  }
+  
+  .footer {
     display: flex;
     justify-content: flex-end;
     width: 100%;
     max-width: 450px;
     margin-top: 16px;
     padding: 0 8px;
-
+  
     a {
-        color: #5f6368;
-        text-decoration: none;
-        font-size: 12px;
-        padding-left: 15px;
+      color: #5f6368;
+      text-decoration: none;
+      font-size: 12px;
+      padding-left: 15px;
     }
-}
-
-@media (max-width: 768px) {
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
     .register-card {
-        height: auto;
-        padding: 24px;
+      height: auto;
+      padding: 24px;
     }
-
+  
     .register-content {
-        flex-direction: column;
+      flex-direction: column;
     }
-
+  
     .left-section, .right-section {
-        width: 100%;
-        padding-right: 0;
+      width: 100%;
+      padding-right: 0;
     }
-
+  
     .left-section {
-        text-align: center;
-        margin-bottom: 32px;
+      text-align: center;
+      margin-bottom: 32px;
+      padding: 20px;
     }
-
+  
     .google-logo {
-        margin-bottom: 16px;
+      margin-bottom: 16px;
     }
-
+  
     .sign-up-title {
-        font-size: 20px;
+      font-size: 20px;
     }
-
+  
     .sign-up-subtitle {
-        font-size: 14px;
+      font-size: 14px;
     }
-
-    .form-field input {
-        padding: 10px;
+  
+    .custom-form-field {
+      .mat-form-field-flex {
+        min-height: 40px;
+      }
+      .mat-input-element {
+        font-size: 13px;
+      }
     }
-
-    .action-buttons {
-        flex-direction: column;
-        align-items: stretch;
-
-        .NextButton {
-            margin-bottom: 16px;
-        }
-    }
-
-    .footer {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 480px) {
+  }
+  
+  @media (max-width: 480px) {
     .register-container {
-        padding: 10px;
+      padding: 10px;
     }
-
+  
     .register-card {
-        padding: 16px;
+      padding: 16px;
     }
-
+  
     .sign-up-title {
-        font-size: 18px;
+      font-size: 18px;
     }
-
+  
     .sign-up-subtitle {
+      font-size: 12px;
+    }
+  
+    .custom-form-field {
+      .mat-form-field-flex {
+        min-height: 36px;
+      }
+      .mat-input-element {
         font-size: 12px;
+        height: 1.6em;
+      }
+      .mat-form-field-infix {
+        padding: 0.3em 0;
+      }
     }
-
-    .form-field input {
-        padding: 8px;
-    }
-
+  
     .footer a {
-        font-size: 10px;
+      font-size: 10px;
     }
-}
+  }

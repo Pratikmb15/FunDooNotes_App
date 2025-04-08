@@ -12,6 +12,7 @@ import { IconButtonsComponent } from './Components/icon-buttons/icon-buttons.com
 import { GetNotesComponent } from './Components/get-notes/get-notes.component';
 import { ArchiveNotesComponent } from './Components/archive-notes/archive-notes.component';
 import { TrashNotesComponent } from './Components/trash-notes/trash-notes.component';
+import { AuthGuardService } from './Services/AuthGaurd/auth-guard.service'; 
 
 const routes: Routes = [
   {path:'Login',component:LoginComponent},
@@ -19,10 +20,11 @@ const routes: Routes = [
   {path:'Forgotpassword',component:ForgotpasswordComponent},
   {path:'Resetpassword',component:ResetpasswordComponent},
   {path:'ToDo',component:ToDoTaskComponent},
-  {path:'get-notes',component:GetNotesComponent},
+  {path:'get-notes',component:GetNotesComponent,canActivate: [AuthGuardService] },
   {
     path: 'Home',
     component: DashboardComponent,
+    canActivate: [AuthGuardService],
     children: [
       { path: '', component: GetNotesComponent }, // Child route of NotesComponent
       {path: 'Archive',component:ArchiveNotesComponent},
@@ -30,8 +32,8 @@ const routes: Routes = [
       //{ path: '', redirectTo: 'notes', pathMatch: 'full' }, 
     ],
   },
-  { path: 'display-notes', component: DisplayNotesComponent },
-  { path: 'icon-buttons', component: IconButtonsComponent },
+  { path: 'display-notes', component: DisplayNotesComponent, canActivate: [AuthGuardService] },
+  { path: 'icon-buttons', component: IconButtonsComponent , canActivate: [AuthGuardService]},
   { path: '', redirectTo: '/Login', pathMatch: 'full' }, // Default route
   { path: '**', redirectTo: '/Login' }, // Fallback route for unknown paths
 

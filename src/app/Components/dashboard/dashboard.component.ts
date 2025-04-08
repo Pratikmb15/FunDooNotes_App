@@ -16,8 +16,6 @@ export class DashboardComponent {
 
   navItems = [
     { name: "Notes", icon: "lightbulb_outline",route: '/Home' },
-    { name: "Reminders", icon: "notifications_none",route: '/Home/Notifications' },
-    { name: "Edit labels", icon: "edit",route: '/Home/Edit' },
     { name: "Archive", icon: "archive",route: '/Home/Archive' },
     { name: "Trash", icon: "delete", route: '/Home/Trash' },
   ]
