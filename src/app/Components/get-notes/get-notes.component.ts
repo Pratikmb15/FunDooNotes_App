@@ -68,4 +68,11 @@ export class GetNotesComponent implements OnInit {
     console.log("create notes to getall notes"+$event);
     this.fetchNotes();
   }
+
+  handleRefresh() {
+    
+    this.fetchNotes(); // Your existing data fetching method
+  }
+ 
+
 }

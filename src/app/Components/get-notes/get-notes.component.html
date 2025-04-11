@@ -3,5 +3,6 @@
   [notes]="notes"
   [loading]="loading"
   [error]="error" 
-  (UpdateAutoRefresh)="recievedRefreshFromDisplaytoGetall($event)"
+  (UpdateAutoRefresh)="recievedRefreshFromDisplaytoGetall($event)" 
+  (refreshRequested)="handleRefresh()"
 ></app-display-notes>

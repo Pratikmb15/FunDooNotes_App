@@ -31,7 +31,7 @@
                     </mat-form-field>
 
                     <div class="forgot-password">
-                        <a href="#">Forgot password?</a>
+                        <a  class="forgot-password" (click)="navigateToForgotPass()" >Forgot password?</a>
                     </div>
 
                     <div class="guest-mode-text">
@@ -39,7 +39,7 @@
                     </div>
 
                     <div class="action-buttons">
-                        <a href="#" class="create-account" (click)="navigateToRegister()">Create account</a>
+                        <a class="create-account" (click)="navigateToRegister()">Create account</a>
                         <button mat-raised-button type="submit" class="NextButton" [disabled]="loginForm.invalid">Next</button>
                     </div>
                 </form>

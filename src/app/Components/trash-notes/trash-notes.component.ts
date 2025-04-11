@@ -78,6 +78,7 @@ export class TrashNotesComponent implements OnInit {
       next: (res: any) => {
         console.log('Note trashed successfully', res);
         this.snackBar.open('Note Deleted Forever Successfully','',{duration:5000});
+        this.fetchNotes();
 
       },
       error: (err) => {
@@ -94,12 +95,14 @@ export class TrashNotesComponent implements OnInit {
     const noteId= note.notes_id;
     this.notesService.trashNotes(noteId).subscribe({
       next: (res: any) => {
-        console.log('Note trashed successfully', res);
+        console.log('Note Restored successfully', res);
         this.snackBar.open('Note restored Successfully','',{duration:5000});
+        this.fetchNotes();
+        
 
       },
       error: (err) => {
-        console.error('Error trashing note:', err);
+        console.error('Error restoring note:', err);
         this.snackBar.open('Note restoration Failed','',{duration:5000});
       }
     });

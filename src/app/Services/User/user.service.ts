@@ -31,4 +31,24 @@ export class UserService {
     }
     return this.httpService.PostMethod('http://localhost:5078/api/users', reqData, false, header)
   }
+
+  forgotPassword(reqData:any){
+    let header = {
+      headers: new HttpHeaders(
+        {
+          'Content-type': 'application/json'
+        })
+    }
+    return this.httpService.PostMethod('http://localhost:5078/api/users/forgot-password',reqData,false,header)
+  }
+
+  ressetPassword(reqData:any,token:any){
+    let header = {
+      headers: new HttpHeaders(
+        {
+          'Content-type': 'application/json'
+        })
+    }
+    return this.httpService.PostMethod(`http://localhost:5078/api/users/set-newpassword/${token}`,reqData,false,header)
+  }
 }

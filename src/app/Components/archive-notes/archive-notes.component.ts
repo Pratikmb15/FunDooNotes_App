@@ -23,6 +23,7 @@ interface Note {
 })
 export class ArchiveNotesComponent implements OnInit {
   @Output() retry = new EventEmitter<void>();
+  // @Output() refreshRequest = new EventEmitter<void>();
   notes: Note[] = [];
   loading = true;
   error = '';
@@ -103,5 +104,8 @@ export class ArchiveNotesComponent implements OnInit {
   }
   onRetry() {
     this.retry.emit();
+  }
+  onRefreshRequested() {
+    this.fetchNotes();
   }
 }

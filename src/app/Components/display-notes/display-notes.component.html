@@ -45,7 +45,7 @@
           <!-- Action buttons - only visible on hover -->
           <div class="note-actions">
            
-            <app-icon-buttons [notesObject]="note"></app-icon-buttons>
+            <app-icon-buttons [notesObject]="note" (refreshRequested)="onRefreshRequested()"></app-icon-buttons>
           </div>
         </div>
       </div>

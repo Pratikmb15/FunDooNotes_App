@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output,OnInit,EventEmitter } from '@angular/core';
 import { NotesService } from '../../Services/Note/notes.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -12,6 +12,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class IconButtonsComponent implements OnInit{
   @Input() notesObject: any;
+  @Output() refreshRequested = new EventEmitter<void>();
 
   Color:any;
   selectedColor: string = ''; 
@@ -46,6 +47,7 @@ export class IconButtonsComponent implements OnInit{
     this.notesService.trashNotes(noteId).subscribe({
       next: (res: any) => {
         console.log('Note trashed successfully', res);
+        this.refreshRequested.emit()
         this.snackBar.open('Note trashed Successfully','',{duration:5000});
 
       },
@@ -59,6 +61,7 @@ export class IconButtonsComponent implements OnInit{
   onArchive(){
     if (!this.notesObject || !this.notesObject.notes_id) {
       console.error("Note object is undefined or missing 'notes_id'");
+      
       return;
     }
     const noteId = this.notesObject.notes_id; // Extract the notes_id
@@ -66,6 +69,7 @@ export class IconButtonsComponent implements OnInit{
    
     this.notesService.ArchiveNotes(noteId).subscribe((res:any)=>{
       console.log('Note Archieved successfully ',res);
+      this.refreshRequested.emit()
       this.snackBar.open('Note Archieved Successfully','',{duration:5000});
     }) 
   }

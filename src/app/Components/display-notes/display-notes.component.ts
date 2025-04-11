@@ -28,6 +28,7 @@ export class DisplayNotesComponent implements OnInit {
   @Input() error: string = '';
   @Output() retry = new EventEmitter<void>();
   @Output() UpdateAutoRefresh = new EventEmitter();
+  @Output() refreshRequested = new EventEmitter<void>();
 
   // notesObject:any
   selectedNote: Note | null = null;
@@ -83,5 +84,12 @@ export class DisplayNotesComponent implements OnInit {
   }
   onRetry() {
     this.retry.emit();
+  }
+  recievedRefreshEventActions($event:any){
+    console.log("Icon buttons to getall notes"+$event);
+    this.UpdateAutoRefresh.emit();
+  }
+  onRefreshRequested() {
+    this.refreshRequested.emit();
   }
 }

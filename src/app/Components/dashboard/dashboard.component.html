@@ -13,10 +13,10 @@
 
 
     <div class="search-container">
-      <mat-form-field appearance="outline" class="custom-form-field">
-        <mat-icon matPrefix>search</mat-icon>
-        <input matInput placeholder="Search" [(ngModel)]="searchText" type="search" (keyup)="search($event)">
-      </mat-form-field>
+      <Form  class="search-form">
+        <span class="material-symbols-outlined">search</span>
+        <input placeholder="Search" [(ngModel)]="searchText" type="search" (keyup)="search($event)">
+      </Form>
     </div>
 
 
