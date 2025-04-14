@@ -3,6 +3,7 @@
   [notes]="notes"
   [loading]="loading"
   [error]="error" 
+  [isGridView]="(isGridView$ | async)!"
   (UpdateAutoRefresh)="recievedRefreshFromDisplaytoGetall($event)" 
   (refreshRequested)="handleRefresh()"
 ></app-display-notes>

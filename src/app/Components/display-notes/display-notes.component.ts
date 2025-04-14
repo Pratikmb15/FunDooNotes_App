@@ -26,6 +26,7 @@ export class DisplayNotesComponent implements OnInit {
   @Input() notes: Note[] = [];
   @Input() loading: boolean = false;
   @Input() error: string = '';
+  @Input() isGridView!: boolean;
   @Output() retry = new EventEmitter<void>();
   @Output() UpdateAutoRefresh = new EventEmitter();
   @Output() refreshRequested = new EventEmitter<void>();

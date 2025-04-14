@@ -25,7 +25,7 @@
         <mat-icon>refresh</mat-icon>
       </button>
 
-      <button mat-icon-button>
+      <button mat-icon-button (click)="toggleView()">
         <mat-icon>view_agenda</mat-icon>
       </button>
 
@@ -37,9 +37,13 @@
         <mat-icon>apps</mat-icon>
       </button>
 
-      <button mat-icon-button class="user-avatar">
+      <button mat-icon-button class="user-avatar" [matMenuTriggerFor]="logMenu">
         <mat-icon>account_circle</mat-icon>
       </button>
+      <mat-menu #logMenu="matMenu">
+        <button mat-menu-item (click)="logOut()">Log Out</button>
+      </mat-menu>
+      
     </div>
   </mat-toolbar>
 

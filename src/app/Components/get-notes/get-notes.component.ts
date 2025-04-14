@@ -1,6 +1,8 @@
 import { Component, Input, input, OnInit } from '@angular/core';
 import { NotesService } from '../../Services/Note/notes.service';
 import { DisplayNotesComponent } from "../display-notes/display-notes.component";
+import { Observable } from 'rxjs';
+import { ViewServiceService } from '../../Services/ViewService/view-service.service';
 
 interface Note {
   notes_id: number;
@@ -23,12 +25,15 @@ interface Note {
 })
 export class GetNotesComponent implements OnInit {
 
-
+  isGridView$: Observable<boolean>;
+  
   notes: Note[] = [];
   loading = true;
   error = '';
 
-  constructor(private notesService: NotesService) {}
+  constructor(private notesService: NotesService,public viewService: ViewServiceService) {
+    this.isGridView$ = this.viewService.viewState$;
+  }
 
   ngOnInit(): void {
     this.fetchNotes();

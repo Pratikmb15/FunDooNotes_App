@@ -1,7 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { UpdateNotesComponent } from '../update-notes/update-notes.component';
 import { NotesService } from '../../Services/Note/notes.service';
+import { Observable } from 'rxjs';
+import { ViewServiceService } from '../../Services/ViewService/view-service.service';
 
 interface Note {
   notes_id: number;
@@ -11,8 +12,8 @@ interface Note {
   isDeleted: boolean;
   isArchive: boolean;
   id: number;
-  isPinned?: boolean; // UI state
-  isSelected?: boolean; // UI state
+  isPinned?: boolean; 
+  isSelected?: boolean; 
 }
 
 @Component({
@@ -22,6 +23,7 @@ interface Note {
   styleUrl: './archive-notes.component.scss'
 })
 export class ArchiveNotesComponent implements OnInit {
+  isGridView$: Observable<boolean>;
   @Output() retry = new EventEmitter<void>();
   // @Output() refreshRequest = new EventEmitter<void>();
   notes: Note[] = [];
@@ -31,7 +33,9 @@ export class ArchiveNotesComponent implements OnInit {
   // notesObject:any
   selectedNote: Note | null = null;
 
-  constructor(public dialog: MatDialog, private notesService: NotesService) { }
+  constructor(public dialog: MatDialog, private notesService: NotesService,public viewService: ViewServiceService) {
+    this.isGridView$ = this.viewService.viewState$;
+   }
 
   ngOnInit(): void {
     this.fetchNotes();
@@ -63,49 +67,14 @@ export class ArchiveNotesComponent implements OnInit {
       },
     });
   }
-  editNoteDialogBox(note: Note) {
-    const dialogbox = this.dialog.open(UpdateNotesComponent, {
-      width: '40%',
-      height: 'auto',
-      data: note // Pass the specific note object
-    });
 
-    dialogbox.afterClosed().subscribe(result => {
-      console.log(result);
-
-    });
+  handleRefresh() {
+    
+    this.fetchNotes(); // Your existing data fetching method
   }
-
-  togglePin(note: Note) {
-    note.isPinned = !note.isPinned;
-  }
-
-  setSelectedNote(note: Note, event: Event) {
-    event.stopPropagation();
-    this.selectedNote = note;
-  }
-
-  toggleSelect(note: Note, event: Event) {
-    event.stopPropagation();
-    note.isSelected = !note.isSelected;
-  }
-
-  // Method to handle note deletion
-  deleteNote(note: Note | null, event: Event) {
-    event.stopPropagation();
-
-    if (!note) {
-      console.error('No note selected for deletion!');
-      return;
-    }
-
-    note.isDeleted = true;
-    console.log('Note trashed:', note);
-  }
-  onRetry() {
-    this.retry.emit();
-  }
-  onRefreshRequested() {
+  recievedRefreshFromDisplaytoGetall($event:any){
+    console.log("display to getall notes"+ $event);
     this.fetchNotes();
   }
+ 
 }
