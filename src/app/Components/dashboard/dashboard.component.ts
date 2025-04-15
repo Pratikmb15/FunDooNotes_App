@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { DataService } from '../../Services/dataService/data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ViewServiceService } from '../../Services/ViewService/view-service.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,11 +12,14 @@ import { ViewServiceService } from '../../Services/ViewService/view-service.serv
   styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent {
-  isGridView = true;
+  isGridView$: Observable<boolean>;
+  // isGridView = true;
   title = "Keep ";
   searchText = " ";
 
-  constructor(private router: Router,private data:DataService, private snackBar: MatSnackBar,public viewService: ViewServiceService){}
+  constructor(private router: Router,private data:DataService, private snackBar: MatSnackBar,public viewService: ViewServiceService){
+    this.isGridView$ = this.viewService.viewState$;
+  }
 
   navItems = [
     { name: "Notes", icon: "lightbulb_outline",route: '/Home' },
@@ -44,13 +48,10 @@ export class DashboardComponent {
     
   }
   }
-  
 toggleView() {
   this.viewService.toggleView();
 }
-// isActive(route: string): boolean {
-//   return this.router.url.includes(route);
-// }
+
 isActive(routePath: string): boolean {
   return this.router.isActive(routePath, {
     paths: 'exact',

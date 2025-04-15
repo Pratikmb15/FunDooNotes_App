@@ -26,7 +26,8 @@
       </button>
 
       <button mat-icon-button (click)="toggleView()">
-        <mat-icon>view_agenda</mat-icon>
+        <mat-icon *ngIf="(isGridView$ | async)">view_agenda</mat-icon>
+        <mat-icon  *ngIf="!(isGridView$ | async)">grid_view</mat-icon> 
       </button>
 
       <button mat-icon-button>
