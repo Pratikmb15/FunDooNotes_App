@@ -20,7 +20,8 @@
   }
 }
 
-.toolbar-left, .toolbar-right {
+.toolbar-left,
+.toolbar-right {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -30,16 +31,16 @@
   display: flex;
   align-items: center;
   margin-right: 32px;
-  
+
   .mat-icon {
     color: #fbbc04;
     margin-right: 8px;
   }
-  
+
   .app-title {
     font-size: 22px;
     font-weight: 400;
-    
+
     @media (max-width: 480px) {
       display: none;
     }
@@ -86,14 +87,19 @@
   background-color: #f1f3f4;
   border-radius: 24px;
   padding: 0 24px;
-  transition: all 0.2s cubic-bezier(0.4,0.0,0.2,1);
+  transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
   border: 1px solid transparent;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 
   @media (max-width: 480px) {
     padding: 0 10px;
     width: 90%;
   }
 }
+
 .search-form input {
   flex: 1;
   border: none;
@@ -103,7 +109,7 @@
   color: #202124;
   font-family: 'Google Sans', Roboto, Arial, sans-serif;
   height: 100%;
-  
+
   &:focus {
     outline: none;
   }
@@ -126,6 +132,7 @@
 
 .sidenav-container {
   flex: 1;
+  background-color: white;
 
   @media (max-width: 768px) {
     .mat-sidenav {
@@ -139,17 +146,52 @@
   }
 }
 
-.mat-nav-list {
+::ng-deep.mat-nav-list {
   padding-top: 8px;
 }
 
 .mat-list-item {
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  margin-right: 12px;
+  transition: background-color 0.2s ease;
+
+  // Hover state
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.04) !important;
+    
+    .mat-icon {
+      color: #202124;
+    }
+  }
+
+  // Active/selected state (like Google Keep)
+  &.active {
+    background-color: #feefc3 !important;
+    font-weight: 500 !important;
+
+    .mat-list-item-content {
+      background-color: inherit !important;
+      color: #202124 !important;
+    }
+
+    .mat-icon {
+      color: #202124 !important;
+    }
+
+    &:hover {
+      background-color: #fde68a !important;
+    }
+  }
+
   @media (max-width: 480px) {
     padding: 0 8px;
-    
+
+
     span {
       font-size: 14px;
     }
+
   }
 }
 
@@ -195,10 +237,46 @@
     bottom: 0;
     left: 0;
     z-index: 100;
-    box-shadow: 3px 0 6px rgba(0,0,0,0.16);
-    
+    box-shadow: 3px 0 6px rgba(0, 0, 0, 0.16);
+
     &.mat-sidenav-opened {
       width: 240px !important;
     }
   }
+}
+
+::ng-deep.mdc-list-item{
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  margin-right: 12px;
+  transition: background-color 0.2s ease;
+
+  // Hover state
+  &:hover {
+    background-color: #feefc3 !important;
+    
+    .mat-icon {
+      color: #202124;
+    }
+  }
+
+  // Active/selected state (like Google Keep)
+  &.active {
+    background-color: #feefc3 !important;
+    font-weight: 500 !important;
+
+    .mat-list-item-content {
+      background-color: inherit !important;
+      color: #202124 !important;
+    }
+
+    .mat-icon {
+      color: #202124 !important;
+    }
+
+    &:hover {
+      background-color: #fde68a !important;
+    }
+  }
+
 }

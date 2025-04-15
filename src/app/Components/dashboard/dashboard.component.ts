@@ -48,5 +48,16 @@ export class DashboardComponent {
 toggleView() {
   this.viewService.toggleView();
 }
+// isActive(route: string): boolean {
+//   return this.router.url.includes(route);
+// }
+isActive(routePath: string): boolean {
+  return this.router.isActive(routePath, {
+    paths: 'exact',
+    matrixParams: 'ignored',
+    queryParams: 'ignored',
+    fragment: 'ignored'
+  });
+}
 
 }

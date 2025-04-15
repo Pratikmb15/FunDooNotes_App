@@ -48,9 +48,9 @@
   </mat-toolbar>
 
   <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav #sidenav mode="side" opened class="sidenav">
+    <mat-sidenav #sidenav mode="side" [opened]="false" class="sidenav">
       <mat-nav-list>
-        <mat-list-item *ngFor="let item of navItems"(click)="navigateTo(item.route)">
+        <mat-list-item *ngFor="let item of navItems"(click)="navigateTo(item.route)" [class.active]="isActive(item.route)">
           <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
           <span matListItemTitle>{{item.name}}</span>
         </mat-list-item>
