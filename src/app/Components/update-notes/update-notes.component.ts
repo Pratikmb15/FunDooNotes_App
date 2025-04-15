@@ -23,6 +23,8 @@ interface Note {
 })
 export class UpdateNotesComponent {
 
+
+
   Description: string;
   Title: string;
   id: number; // Ensure this is correctly extracted
@@ -44,7 +46,8 @@ export class UpdateNotesComponent {
     let reqData = {
       title: this.Title,
       description: this.Description,
-      color: this.Color // Ensure this matches the backend model
+      // color: this.Color // Ensure this matches the backend model
+      color: this.data.color
     };
 
     this.notesService.updateNotes(reqData, this.id).subscribe(
