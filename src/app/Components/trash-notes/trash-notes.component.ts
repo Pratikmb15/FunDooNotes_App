@@ -3,6 +3,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { UpdateNotesComponent } from '../update-notes/update-notes.component';
 import { NotesService } from '../../Services/Note/notes.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { ViewServiceService } from '../../Services/ViewService/view-service.service';
+import { Observable } from 'rxjs';
 
 interface Note {
   notes_id: number;
@@ -23,6 +25,7 @@ interface Note {
   styleUrl: './trash-notes.component.scss'
 })
 export class TrashNotesComponent implements OnInit {
+   isGridView$: Observable<boolean>;
   @Output() retry = new EventEmitter<void>();
   notes: Note[] = [];
   loading = true;
@@ -31,7 +34,9 @@ export class TrashNotesComponent implements OnInit {
   // notesObject:any
   selectedNote: Note | null = null;
 
-  constructor(public dialog: MatDialog, private notesService: NotesService,private snackBar: MatSnackBar) { }
+  constructor(public dialog: MatDialog, private notesService: NotesService,private snackBar: MatSnackBar,public viewService: ViewServiceService) { 
+    this.isGridView$ = this.viewService.viewState$;
+  }
 
   ngOnInit(): void {
     this.fetchNotes();

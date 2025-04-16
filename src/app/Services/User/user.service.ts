@@ -9,7 +9,7 @@ export class UserService {
 
   constructor(private httpService: HttpService) { }
 
-  Login(reqData: any) {
+  login(reqData: any) {
 
     let header = {
       headers: new HttpHeaders(
@@ -17,7 +17,7 @@ export class UserService {
           'Content-type': 'application/json'
         })
     }
-    return this.httpService.PostMethod('http://localhost:5078/api/users/login', reqData, false, header)
+    return this.httpService.postMethod('http://localhost:5078/api/users/login', reqData, false, header)
 
   }
 
@@ -29,7 +29,7 @@ export class UserService {
           'Content-type': 'application/json'
         })
     }
-    return this.httpService.PostMethod('http://localhost:5078/api/users', reqData, false, header)
+    return this.httpService.postMethod('http://localhost:5078/api/users', reqData, false, header)
   }
 
   forgotPassword(reqData:any){
@@ -39,7 +39,7 @@ export class UserService {
           'Content-type': 'application/json'
         })
     }
-    return this.httpService.PostMethod('http://localhost:5078/api/users/forgot-password',reqData,false,header)
+    return this.httpService.postMethod('http://localhost:5078/api/users/forgot-password',reqData,false,header)
   }
 
   ressetPassword(reqData:any,token:any){
@@ -49,6 +49,6 @@ export class UserService {
           'Content-type': 'application/json'
         })
     }
-    return this.httpService.PostMethod(`http://localhost:5078/api/users/set-newpassword/${token}`,reqData,false,header)
+    return this.httpService.postMethod(`http://localhost:5078/api/users/set-newpassword/${token}`,reqData,false,header)
   }
 }

@@ -27,7 +27,7 @@ export class NotesService {
         })
 
     }
-    return this.httpService.PostMethodToken('http://localhost:5078/api/notes', reqData, true, header)
+    return this.httpService.postMethodToken('http://localhost:5078/api/notes', reqData, true, header)
   }
   getNotes() {
     let header = {

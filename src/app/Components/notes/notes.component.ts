@@ -38,6 +38,7 @@ export class NotesComponent implements OnInit {
 
   Color:any;
   selectedColor: string = '#ffffff'; 
+ 
 
   colorArray: Array<any> = [
     { code: '#ffffff', name: 'white' },
@@ -66,6 +67,7 @@ export class NotesComponent implements OnInit {
 
   expandNote() {
     this.isExpanded = true;
+  
   }
 
   closeNote(event: Event) {
@@ -84,7 +86,6 @@ export class NotesComponent implements OnInit {
       this.note.addNotes(reqData).subscribe(
         (res: any) => {
           console.log("Response:", res);
-          this.selectedColor="#ffffff";
           this.refreshEventCreate.emit(res);
         },
         (error) => {
@@ -95,6 +96,7 @@ export class NotesComponent implements OnInit {
     
     // Always collapse and reset the form
     this.isExpanded = false;
+    this.selectedColor='#ffffff';
     this.noteForm.reset();
   }
   SelectColor(color:any){

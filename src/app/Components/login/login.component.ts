@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
       password: ['', Validators.required]
     })
   }
-  Login() {
+  login() {
     if (this.loginForm.invalid) {
       // Mark all fields as touched to show errors
       this.loginForm.markAllAsTouched();
@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
       email: this.loginForm.value.email,
       password: this.loginForm.value.password
     }
-    return this.user.Login(reqData).subscribe({
+    return this.user.login(reqData).subscribe({
       next: (res: any) => {
         console.log(res)
         localStorage.setItem("token", res.token);

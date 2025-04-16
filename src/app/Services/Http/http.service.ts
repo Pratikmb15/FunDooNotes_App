@@ -8,11 +8,11 @@ export class HttpService {
 
   constructor(private http: HttpClient) { }
 
-  PostMethod(reqUrl:any, reqData:any, token:boolean=false,httpOptions:any={}){
+  postMethod(reqUrl:any, reqData:any, token:boolean=false,httpOptions:any={}){
     return this.http.post(reqUrl,reqData,token&& httpOptions)
   }
 
-  PostMethodToken(reqUrl:any, reqData:any, token:boolean=true,httpOptions:any={}){
+  postMethodToken(reqUrl:any, reqData:any, token:boolean=true,httpOptions:any={}){
     return this.http.post(reqUrl,reqData,token&& httpOptions)
   }
   getService(reqUrl:any,  token:boolean=true,httpOptions:any={}){

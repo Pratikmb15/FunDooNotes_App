@@ -21,11 +21,11 @@
       <!-- Expanded State -->
       <div class="note-expanded" *ngIf="isExpanded">
         <form [formGroup]="noteForm" >
-          <input formControlName="Title" type="Title" placeholder="Title" [(ngModel)]="noteTitle" class="title-input" [style.background-color]="selectedColor">
+          <input formControlName="Title" type="Title" placeholder="Title" [(ngModel)]="noteTitle" class="title-input">
 
           <textarea formControlName="Description" type="Description" placeholder="Take a note..."
             [(ngModel)]="noteContent" class="content-input" cdkTextareaAutosize #autosize="cdkTextareaAutosize"
-            cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10" [style.background-color]="selectedColor">
+            cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10" >
           </textarea>
 
           <div class="note-actions">

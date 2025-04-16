@@ -19,7 +19,8 @@
       </div>
   
       <!-- Notes grid -->
-      <div class="notes-grid" *ngIf="!loading && !error && notes.length > 0">
+      <div class="notes-grid" *ngIf="!loading && !error && notes.length > 0" [class.notes-grid]="(isGridView$ | async)"
+        [class.notes-list]="!(isGridView$ | async)!">
         <div class="note-card" *ngFor="let note of notes" 
              [class.selected]="note.isSelected"
              [style.background-color]="note.color ? note.color.toLowerCase() : 'white'">
